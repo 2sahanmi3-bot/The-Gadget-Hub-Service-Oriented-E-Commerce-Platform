@@ -1,0 +1,75 @@
+@page
+@model GadgetHubClient.Pages.Admin.ProductsModel
+@{
+	ViewData["Title"] = "Admin - Products";
+}
+
+<section class="py-5">
+	<div class="container">
+		<div class="d-flex justify-content-between align-items-center mb-4">
+			<h2 class="mb-0">Products</h2>
+			<div class="d-flex align-items-center">
+				<form method="post" class="d-flex align-items-center" asp-page-handler="Add">
+					<input name="GlobalIdInput" class="form-control me-2" style="width: 280px;" placeholder="Enter Global Id" value="@Model.GlobalIdInput" />
+					<button type="submit" class="btn btn-primary"><i class="fas fa-plus me-1"></i>Add Product</button>
+				</form>
+			</div>
+		</div>
+
+		@if (!string.IsNullOrEmpty(Model.StatusMessage))
+		{
+			<div class="alert alert-@(Model.IsSuccess ? "success" : "danger")">@Model.StatusMessage</div>
+		}
+
+		@if (Model.Products.Any())
+		{
+			<div class="card border-0 shadow-sm">
+				<div class="card-body">
+					<div class="table-responsive">
+						<table class="table table-hover align-middle">
+							<thead>
+								<tr>
+									<th style="width: 70px;">ID</th>
+									<th>Name</th>
+									<th style="width: 120px;">Category</th>
+									<th style="width: 120px;" class="text-end">Price</th>
+									<th style="width: 120px;" class="text-center">Stock</th>
+									<th style="width: 140px;" class="text-end">Actions</th>
+								</tr>
+							</thead>
+							<tbody>
+								@foreach (var p in Model.Products)
+								{
+									<tr>
+										<td>@p.ProductId</td>
+										<td>
+											<div class="fw-semibold">@p.Name</div>
+											<div class="text-muted small text-truncate" style="max-width: 520px;">@p.Description</div>
+										</td>
+										<td>@p.Category</td>
+										<td class="text-end">Rs. @((p.Price * 100).ToString("N0"))</td>
+										<td class="text-center">
+											<span class="badge bg-@(p.Stock > 20 ? "success" : p.Stock > 0 ? "warning" : "danger")">@p.Stock</span>
+										</td>
+										<td class="text-end">
+											<a class="btn btn-sm btn-outline-primary" href="/ProductDetails/@p.ProductId"><i class="fas fa-eye"></i></a>
+											<a class="btn btn-sm btn-outline-secondary disabled" title="Edit (coming soon)"><i class="fas fa-edit"></i></a>
+										</td>
+									</tr>
+								}
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		}
+		else
+		{
+			<div class="text-center py-5">
+				<i class="fas fa-box-open fa-3x text-muted mb-3"></i>
+				<h5>No products found</h5>
+				<p class="text-muted">Once products are available, they'll appear here.</p>
+			</div>
+		}
+	</div>
+</section>

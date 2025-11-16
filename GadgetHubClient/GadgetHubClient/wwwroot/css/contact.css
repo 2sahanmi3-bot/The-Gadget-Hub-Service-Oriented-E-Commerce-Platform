@@ -1,0 +1,224 @@
+/* Contact Page Styles */
+.contact-hero {
+    background: linear-gradient(135deg, #0d6efd 0%, #0056b3 100%);
+}
+
+.contact-stats h4 {
+    font-size: 1.5rem;
+}
+
+.contact-stats small {
+    font-size: 0.8rem;
+    opacity: 0.9;
+}
+
+.contact-card {
+    border: none;
+    background: white;
+}
+
+.contact-info-section h2,
+.contact-form-section h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+}
+
+.contact-method {
+    transition: all 0.3s ease;
+}
+
+.contact-method:hover {
+    transform: translateX(5px);
+}
+
+.contact-icon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+}
+
+.contact-input {
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    background: #f8f9fa;
+}
+
+.contact-input:focus {
+    border-color: #0d6efd;
+    background: white;
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+
+.contact-input.is-valid {
+    border-color: #198754;
+    background: white;
+}
+
+.contact-input.is-invalid {
+    border-color: #dc3545;
+    background: white;
+}
+
+.contact-submit-btn {
+    background: linear-gradient(135deg, #0d6efd, #0056b3);
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.contact-submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(13, 110, 253, 0.3);
+}
+
+.contact-submit-btn:disabled {
+    opacity: 0.7;
+    transform: none;
+}
+
+.map-section {
+    margin-top: 2rem;
+}
+
+.map-container {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.map-container iframe {
+    border-radius: 12px;
+}
+
+/* Floating Chat Widget */
+.floating-chat-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    animation: float 3s ease-in-out infinite;
+}
+
+.chat-widget-content {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 25px;
+    padding: 8px 16px 8px 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.chat-widget-content:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+}
+
+.chat-text {
+    margin-right: 12px;
+}
+
+.chat-text span {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #495057;
+}
+
+.whatsapp-btn {
+    width: 40px;
+    height: 40px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+    background: #128C7E;
+    color: white;
+    transform: scale(1.1);
+}
+
+.whatsapp-btn i {
+    font-size: 1.2rem;
+}
+
+@@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Form Validation Styles */
+.form-label {
+    font-weight: 600;
+    color: #495057;
+    margin-bottom: 0.5rem;
+}
+
+.invalid-feedback {
+    display: block;
+    font-size: 0.875rem;
+    color: #dc3545;
+    margin-top: 0.25rem;
+}
+
+.valid-feedback {
+    display: block;
+    font-size: 0.875rem;
+    color: #198754;
+    margin-top: 0.25rem;
+}
+
+/* Responsive Contact Page */
+@media (max-width: 768px) {
+    .contact-hero .display-4 {
+        font-size: 2rem;
+    }
+    
+    .contact-stats h4 {
+        font-size: 1.2rem;
+    }
+    
+    .contact-info-section h2,
+    .contact-form-section h2 {
+        font-size: 1.5rem;
+    }
+    
+    .contact-card {
+        padding: 2rem !important;
+    }
+    
+    .floating-chat-widget {
+        bottom: 15px;
+        right: 15px;
+    }
+    
+    .chat-widget-content {
+        padding: 6px 12px 6px 6px;
+    }
+    
+    .chat-text span {
+        font-size: 0.8rem;
+    }
+    
+    .whatsapp-btn {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .whatsapp-btn i {
+        font-size: 1rem;
+    }
+}

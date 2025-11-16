@@ -1,0 +1,870 @@
+@page "/ProductDetails/{productId}"
+@model GadgetHubClient.Pages.ProductDetailsModel
+@{
+    ViewData["Title"] = "Product Details - The Gadget Hub";
+}
+
+<!-- Modern Hero Section -->
+<div class="hero-section-modern">
+    <div class="container">
+        <nav aria-label="breadcrumb" class="py-3">
+            <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item"><a href="/" class="text-decoration-none">Home</a></li>
+                <li class="breadcrumb-item"><a href="/Products" class="text-decoration-none">Products</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Product Details</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+<!-- Product Details Content -->
+<div class="container my-5">
+    <div id="loadingSpinner" class="text-center py-5">
+        <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+        <p class="mt-3 text-muted">Loading product details...</p>
+    </div>
+
+    <div id="productDetails" class="product-details-modern" style="display: none;">
+        <!-- Product Header -->
+        <div class="product-header mb-5">
+            <h1 id="productName" class="product-title-modern mb-3"></h1>
+            <p id="productDescription" class="product-description-modern"></p>
+        </div>
+
+        <div class="row g-4">
+            <!-- Product Image -->
+            <div class="col-lg-6">
+                <div class="product-image-modern">
+                    <div class="image-container">
+                        <img id="productImage" src="" alt="Product Image" class="main-image">
+                        <div class="image-overlay">
+                            <div class="image-actions">
+                                <button class="btn btn-light btn-sm" onclick="zoomImage()">
+                                    <i class="fas fa-search-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Information -->
+            <div class="col-lg-6">
+                <div class="product-info-modern">
+                    <!-- Final Price Card -->
+                    <div class="pricing-modern mb-4">
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <div class="price-card-modern final-price">
+                                    <div class="price-header">
+                                        <i class="fas fa-shopping-cart"></i>
+                                        <span>Final Price</span>
+                                    </div>
+                                    <div class="price-amount">
+                                        <span id="finalPrice" class="price-value"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Available Stock -->
+                    <div class="product-features mb-4">
+                        <div class="feature-grid">
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-boxes"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <div class="feature-label">Available Stock</div>
+                                    <div class="feature-value" id="availableStock"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="action-buttons-modern">
+                        <button id="placeOrderBtn" class="btn btn-primary btn-lg me-3" onclick="placeOrder()">
+                            <i class="fas fa-shopping-bag me-2"></i>Place Order
+                        </button>
+                        <button class="btn btn-outline-secondary btn-lg" onclick="goBack()">
+                            <i class="fas fa-arrow-left me-2"></i>Back to Products
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Error Message -->
+    <div id="errorMessage" class="alert alert-danger" style="display: none;">
+        <i class="fas fa-exclamation-triangle me-2"></i>
+        <span id="errorText"></span>
+        <div class="mt-2">
+            <button class="btn btn-sm btn-outline-danger" onclick="retryLoadProduct()">
+                <i class="fas fa-redo me-1"></i>Retry
+            </button>
+        </div>
+    </div>
+</div>
+
+<style>
+/* Modern Professional Styling */
+:root {
+    --primary-color: #2563eb;
+    --primary-dark: #1d4ed8;
+    --secondary-color: #64748b;
+    --success-color: #10b981;
+    --warning-color: #f59e0b;
+    --danger-color: #ef4444;
+    --light-bg: #f8fafc;
+    --dark-text: #1e293b;
+    --border-color: #e2e8f0;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #ffffff;
+    color: var(--dark-text);
+}
+
+/* Hero Section */
+.hero-section-modern {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.breadcrumb {
+    background: none;
+    padding: 0;
+}
+
+.breadcrumb-item a {
+    color: var(--secondary-color);
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.breadcrumb-item a:hover {
+    color: var(--primary-color);
+}
+
+.breadcrumb-item.active {
+    color: var(--dark-text);
+    font-weight: 600;
+}
+
+/* Product Details */
+.product-details-modern {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.product-title-modern {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--dark-text);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.product-description-modern {
+    font-size: 1.25rem;
+    color: var(--secondary-color);
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Product Image */
+.product-image-modern {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    background: #fff;
+}
+
+.image-container {
+    position: relative;
+    aspect-ratio: 4/3;
+    overflow: hidden;
+}
+
+.main-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.product-image-modern:hover .image-overlay {
+    opacity: 1;
+}
+
+.product-image-modern:hover .main-image {
+    transform: scale(1.05);
+}
+
+.image-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+/* Product Info */
+.product-info-modern {
+    padding: 2rem;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+}
+
+/* Pricing Cards */
+.pricing-modern {
+    margin-bottom: 2rem;
+}
+
+.price-card-modern {
+    background: #fff;
+    border: 2px solid var(--border-color);
+    border-radius: 16px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.price-card-modern:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-color);
+}
+
+.distributor-price {
+    border-color: var(--success-color);
+}
+
+.distributor-price:hover {
+    border-color: var(--success-color);
+    box-shadow: 0 10px 15px -3px rgba(16, 185, 129, 0.1);
+}
+
+.final-price {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.price-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.price-amount {
+    margin-bottom: 0.5rem;
+}
+
+.price-value {
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.distributor-price .price-value {
+    color: var(--success-color);
+}
+
+.price-subtitle {
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+
+/* Product Features */
+.product-features {
+    background: var(--light-bg);
+    border-radius: 16px;
+    padding: 1.5rem;
+    border: 1px solid var(--border-color);
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.feature-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    flex-shrink: 0;
+}
+
+.feature-item:nth-child(1) .feature-icon {
+    background: rgba(16, 185, 129, 0.1);
+    color: var(--success-color);
+}
+
+.feature-item:nth-child(2) .feature-icon {
+    background: rgba(37, 99, 235, 0.1);
+    color: var(--primary-color);
+}
+
+.feature-item:nth-child(3) .feature-icon {
+    background: rgba(245, 158, 11, 0.1);
+    color: var(--warning-color);
+}
+
+.feature-content {
+    flex: 1;
+}
+
+.feature-label {
+    font-size: 0.85rem;
+    color: var(--secondary-color);
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+}
+
+.feature-value {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--dark-text);
+}
+
+/* Action Buttons */
+.action-buttons-modern {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn-lg {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    box-shadow: var(--shadow);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.btn-outline-secondary {
+    border: 2px solid var(--border-color);
+    color: var(--secondary-color);
+}
+
+.btn-outline-secondary:hover {
+    background: var(--light-bg);
+    border-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+/* Quotes Section */
+.quotes-section-modern {
+    margin-top: 4rem;
+    padding: 2rem;
+    background: var(--light-bg);
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
+}
+
+.quotes-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.quotes-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--dark-text);
+    margin-bottom: 0.5rem;
+}
+
+.quotes-subtitle {
+    color: var(--secondary-color);
+    font-size: 1.1rem;
+}
+
+.quotes-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.quote-card {
+    background: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow);
+}
+
+.quote-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-color);
+}
+
+.quote-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.quote-distributor {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--dark-text);
+}
+
+.quote-badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.quote-badge.best {
+    background: rgba(16, 185, 129, 0.1);
+    color: var(--success-color);
+}
+
+.quote-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.quote-detail {
+    text-align: center;
+}
+
+.quote-detail-label {
+    font-size: 0.8rem;
+    color: var(--secondary-color);
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+}
+
+.quote-detail-value {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--dark-text);
+}
+
+.quote-actions {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-end;
+}
+
+/* Loading Spinner */
+.spinner-border {
+    animation: spin 1s linear infinite;
+}
+
+@@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@@media (max-width: 768px) {
+    .product-title-modern {
+        font-size: 2rem;
+    }
+    
+    .product-description-modern {
+        font-size: 1.1rem;
+    }
+    
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .action-buttons-modern {
+        flex-direction: column;
+    }
+    
+    .btn-lg {
+        width: 100%;
+    }
+}
+
+/* Utility Classes */
+.text-gradient {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+</style>
+
+@section Scripts {
+<script>
+    let productData = null;
+    let productId = @Model.ProductId;
+
+    // Load product details when page loads
+    document.addEventListener('DOMContentLoaded', function() {
+        loadProductDetails();
+    });
+
+    async function loadProductDetails() {
+        try {
+            console.log('Starting to load product details...');
+            console.log('ProductId:', productId);
+            showLoading(true);
+            
+            // Get product details from GadgetHubAPI
+            const apiBaseUrl = '@Html.Raw(Model.Configuration?["GadgetHubAPI:BaseUrl"] ?? "https://localhost:7063")';
+            const quotationUrl = `${apiBaseUrl}/api/Quotation/product-details/${productId}?quantity=1`;
+            
+            console.log('API Base URL:', apiBaseUrl);
+            console.log('Quotation URL:', quotationUrl);
+
+            const response = await fetch(quotationUrl, {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+
+            console.log('Response status:', response.status);
+            console.log('Response ok:', response.ok);
+            console.log('Response headers:', response.headers);
+
+            if (response.ok) {
+                const responseText = await response.text();
+                console.log('Raw response text:', responseText);
+                
+                try {
+                    productData = JSON.parse(responseText);
+                    console.log('Parsed product data:', productData);
+                } catch (parseError) {
+                    console.error('JSON parse error:', parseError);
+                    showError('Invalid JSON response from server');
+                    showLoading(false);
+                    return;
+                }
+                
+                // Validate the response data
+                if (productData && productData.bestQuote) {
+                    console.log('Data validation passed, displaying product details');
+                    displayProductDetails(productData);
+                    showLoading(false);
+                } else {
+                    console.error('Invalid product data structure:', productData);
+                    showError('Invalid product data received from server');
+                    showLoading(false);
+                }
+            } else {
+                let errorMessage = 'Unknown error';
+                try {
+                    const errorData = await response.json();
+                    if (response.status === 404) {
+                        errorMessage = `Product with ID "${productId}" not found in any distributor. Please check the product ID and try again.`;
+                    } else {
+                        errorMessage = errorData.message || errorData.error || 'Unknown error';
+                    }
+                    console.error('API Error:', errorData);
+                } catch (e) {
+                    console.error('Failed to parse error response:', e);
+                    errorMessage = `Server returned ${response.status}: ${response.statusText}`;
+                }
+                showError(`Failed to load product details: ${errorMessage}`);
+                showLoading(false);
+            }
+        } catch (error) {
+            console.error('Error loading product details:', error);
+            showError('Failed to load product details. Please try again.');
+            showLoading(false);
+        }
+    }
+
+    function displayProductDetails(data) {
+        console.log('Displaying product details:', data);
+        const bestQuote = data.bestQuote;
+        
+        // Display basic product information
+        document.getElementById('productName').textContent = bestQuote.productName || 'Product ' + productId;
+        document.getElementById('productDescription').textContent = data.description || `High-quality product with excellent features and performance. Product ID: ${productId}`;
+        
+        // Display pricing (convert from cents to rupees)
+        const bestPrice = bestQuote.price || 0;
+        const finalPrice = Math.round((bestPrice * 1.25) * 100) / 100;
+        
+        document.getElementById('finalPrice').textContent = `Rs. ${finalPrice.toLocaleString()}`;
+        
+        // Display stock information
+        document.getElementById('availableStock').textContent = bestQuote.availableQuantity || 'N/A';
+        
+        // Display product image
+        const productImage = document.getElementById('productImage');
+        if (bestQuote.thumbnail && bestQuote.thumbnail.trim() !== '') {
+            productImage.src = bestQuote.thumbnail;
+            productImage.alt = bestQuote.productName || 'Product Image';
+        } else {
+            // Hide image if no thumbnail available
+            productImage.style.display = 'none';
+        }
+        
+        // Show the product details
+        document.getElementById('productDetails').style.display = 'block';
+        
+        // Store product data for order placement
+        window.currentProductData = {
+            productId: productId,
+            globalId: data.globalId,
+            distributorProductId: bestQuote.productId,
+            productName: bestQuote.productName,
+            bestPrice: bestPrice,
+            finalPrice: finalPrice,
+            distributor: bestQuote.distributor,
+            thumbnail: bestQuote.thumbnail
+        };
+    }
+
+
+
+    // Check if user is logged in
+    async function checkUserLoginStatus() {
+        try {
+            const response = await fetch('/api/auth/check', {
+                method: 'GET',
+                credentials: 'include'
+            });
+            return response.ok;
+        } catch (error) {
+            console.error('Error checking login status:', error);
+            return false;
+        }
+    }
+
+    async function placeOrder() {
+        try {
+            console.log('Placing order...');
+            const button = document.getElementById('placeOrderBtn');
+            const originalText = button.innerHTML;
+            button.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Placing Order...';
+            button.disabled = true;
+
+            // Check if user is logged in by making a request to check session
+            const isLoggedIn = await checkUserLoginStatus();
+            
+            if (!isLoggedIn) {
+                showNotification('Please login to place an order', 'warning');
+                setTimeout(() => {
+                    window.location.href = '/Login?returnUrl=' + encodeURIComponent(window.location.pathname);
+                }, 1500);
+                return;
+            }
+
+            // Get delivery address
+            const deliveryAddress = prompt('Please enter your delivery address:');
+            if (!deliveryAddress || deliveryAddress.trim() === '') {
+                showNotification('Delivery address is required', 'error');
+                button.innerHTML = originalText;
+                button.disabled = false;
+                return;
+            }
+
+            // Use stored product data
+            const productData = window.currentProductData;
+            if (!productData) {
+                showNotification('Product data not available. Please refresh the page.', 'error');
+                button.innerHTML = originalText;
+                button.disabled = false;
+                return;
+            }
+
+            console.log('Order data:', productData);
+
+            const orderData = {
+                CustomerId: parseInt(customerId),
+                OrderItems: [{
+                    GlobalId: productData.globalId,
+                    ProductId: productData.productId,
+                    ProductName: productData.productName,
+                    Quantity: 1,
+                    UnitPrice: productData.finalPrice,
+                    ImageUrl: productData.thumbnail || ''
+                }],
+                PaymentMethod: 'Cash on Delivery',
+                DeliveryAddress: deliveryAddress.trim(),
+                Notes: `Order placed for ${productData.productName} from ${productData.distributor}`
+            };
+
+            console.log('Sending order:', orderData);
+
+            const apiBaseUrl = '@Html.Raw(Model.Configuration?["GadgetHubAPI:BaseUrl"] ?? "https://localhost:7063")';
+            const orderUrl = `${apiBaseUrl}/api/Order/place`;
+
+            const response = await fetch(orderUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(orderData)
+            });
+
+            console.log('Order response status:', response.status);
+
+            if (response.ok) {
+                const orderResponse = await response.json();
+                console.log('Order response:', orderResponse);
+                showNotification(`Order placed successfully! Order Number: ${orderResponse.orderNumber || 'N/A'}`, 'success');
+                
+                // Redirect to home page after successful order
+                setTimeout(() => {
+                    window.location.href = '/';
+                }, 2000);
+            } else {
+                const errorData = await response.json();
+                console.error('Order error:', errorData);
+                showNotification(`Failed to place order: ${errorData.message || 'Unknown error'}`, 'error');
+            }
+        } catch (error) {
+            console.error('Error placing order:', error);
+            showNotification('Failed to place order. Please try again.', 'error');
+        } finally {
+            const button = document.getElementById('placeOrderBtn');
+            button.innerHTML = '<i class="fas fa-shopping-bag me-2"></i>Place Order';
+            button.disabled = false;
+        }
+    }
+
+    function goBack() {
+        window.history.back();
+    }
+
+    function zoomImage() {
+        const image = document.getElementById('productImage');
+        if (image.src) {
+            // Create a modal for image zoom
+            const modal = document.createElement('div');
+            modal.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.9);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 9999;
+                cursor: pointer;
+            `;
+            
+            const img = document.createElement('img');
+            img.src = image.src;
+            img.style.cssText = `
+                max-width: 90%;
+                max-height: 90%;
+                object-fit: contain;
+                border-radius: 10px;
+            `;
+            
+            modal.appendChild(img);
+            document.body.appendChild(modal);
+            
+            modal.onclick = () => {
+                document.body.removeChild(modal);
+            };
+        }
+    }
+
+    function showLoading(show) {
+        document.getElementById('loadingSpinner').style.display = show ? 'block' : 'none';
+        document.getElementById('productDetails').style.display = show ? 'none' : 'block';
+    }
+
+    function showError(message) {
+        document.getElementById('errorText').textContent = message;
+        document.getElementById('errorMessage').style.display = 'block';
+        document.getElementById('productDetails').style.display = 'none';
+    }
+
+    function retryLoadProduct() {
+        document.getElementById('errorMessage').style.display = 'none';
+        loadProductDetails();
+    }
+
+    function showNotification(message, type) {
+        // Create notification element
+        const notification = document.createElement('div');
+        notification.className = `alert alert-${type === 'error' ? 'danger' : type} alert-dismissible fade show position-fixed`;
+        notification.style.cssText = 'top: 20px; right: 20px; z-index: 9999; min-width: 300px;';
+        notification.innerHTML = `
+            ${message}
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        `;
+        
+        document.body.appendChild(notification);
+        
+        // Auto remove after 5 seconds
+        setTimeout(() => {
+            if (notification.parentNode) {
+                notification.parentNode.removeChild(notification);
+            }
+        }, 5000);
+    }
+</script>
+}

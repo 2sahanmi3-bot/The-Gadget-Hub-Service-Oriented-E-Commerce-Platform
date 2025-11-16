@@ -1,0 +1,68 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\GadgetCentralManagementSystem\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CF0CD5DE-E1CC-436C-8D0E-16D3C306B97C}|GadgetCentralManagementSystem\\GadgetCentralManagementSystem.csproj|c:\\users\\sh_ma\\onedrive\\desktop\\sahanmi_soc\\gadgetcentralmanagementsystem\\gadgetcentralmanagementsystem\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF0CD5DE-E1CC-436C-8D0E-16D3C306B97C}|GadgetCentralManagementSystem\\GadgetCentralManagementSystem.csproj|solutionrelative:gadgetcentralmanagementsystem\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF0CD5DE-E1CC-436C-8D0E-16D3C306B97C}|GadgetCentralManagementSystem\\GadgetCentralManagementSystem.csproj|C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\GadgetCentralManagementSystem\\gadgetcentralmanagementsystem\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF0CD5DE-E1CC-436C-8D0E-16D3C306B97C}|GadgetCentralManagementSystem\\GadgetCentralManagementSystem.csproj|solutionrelative:gadgetcentralmanagementsystem\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF0CD5DE-E1CC-436C-8D0E-16D3C306B97C}|GadgetCentralManagementSystem\\GadgetCentralManagementSystem.csproj|C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\GadgetCentralManagementSystem\\gadgetcentralmanagementsystem\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{CF0CD5DE-E1CC-436C-8D0E-16D3C306B97C}|GadgetCentralManagementSystem\\GadgetCentralManagementSystem.csproj|solutionrelative:gadgetcentralmanagementsystem\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\GadgetCentralManagementSystem\\GadgetCentralManagementSystem\\Product.cs",
+              "RelativeDocumentMoniker": "GadgetCentralManagementSystem\\Product.cs",
+              "ToolTip": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\GadgetCentralManagementSystem\\GadgetCentralManagementSystem\\Product.cs",
+              "RelativeToolTip": "GadgetCentralManagementSystem\\Product.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-20T11:30:18.867Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\GadgetCentralManagementSystem\\GadgetCentralManagementSystem\\Form1.cs",
+              "RelativeDocumentMoniker": "GadgetCentralManagementSystem\\Form1.cs",
+              "ToolTip": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\GadgetCentralManagementSystem\\GadgetCentralManagementSystem\\Form1.cs",
+              "RelativeToolTip": "GadgetCentralManagementSystem\\Form1.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAowCwAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-20T11:27:44.418Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\GadgetCentralManagementSystem\\GadgetCentralManagementSystem\\Form1.cs",
+              "RelativeDocumentMoniker": "GadgetCentralManagementSystem\\Form1.cs",
+              "ToolTip": "C:\\Users\\HARSHITH\\Desktop\\Sahanmi_SOC\\GadgetCentralManagementSystem\\GadgetCentralManagementSystem\\Form1.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\HARSHITH\\Desktop\\Sahanmi_SOC\\GadgetCentralManagementSystem\\GadgetCentralManagementSystem\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-20T11:26:52.096Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

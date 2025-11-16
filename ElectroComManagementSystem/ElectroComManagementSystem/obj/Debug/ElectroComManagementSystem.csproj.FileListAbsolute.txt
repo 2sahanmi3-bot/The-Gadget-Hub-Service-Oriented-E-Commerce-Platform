@@ -1,0 +1,10 @@
+C:\Users\HARSHITH\Desktop\Sahanmi_SOC\ElectroComManagementSystem\ElectroComManagementSystem\bin\Debug\ElectroComManagementSystem.exe.config
+C:\Users\HARSHITH\Desktop\Sahanmi_SOC\ElectroComManagementSystem\ElectroComManagementSystem\bin\Debug\ElectroComManagementSystem.exe
+C:\Users\HARSHITH\Desktop\Sahanmi_SOC\ElectroComManagementSystem\ElectroComManagementSystem\bin\Debug\ElectroComManagementSystem.pdb
+C:\Users\HARSHITH\Desktop\Sahanmi_SOC\ElectroComManagementSystem\ElectroComManagementSystem\obj\Debug\ElectroComManagementSystem.csproj.AssemblyReference.cache
+C:\Users\HARSHITH\Desktop\Sahanmi_SOC\ElectroComManagementSystem\ElectroComManagementSystem\obj\Debug\ElectroComManagementSystem.Form1.resources
+C:\Users\HARSHITH\Desktop\Sahanmi_SOC\ElectroComManagementSystem\ElectroComManagementSystem\obj\Debug\ElectroComManagementSystem.Properties.Resources.resources
+C:\Users\HARSHITH\Desktop\Sahanmi_SOC\ElectroComManagementSystem\ElectroComManagementSystem\obj\Debug\ElectroComManagementSystem.csproj.GenerateResource.cache
+C:\Users\HARSHITH\Desktop\Sahanmi_SOC\ElectroComManagementSystem\ElectroComManagementSystem\obj\Debug\ElectroComManagementSystem.csproj.CoreCompileInputs.cache
+C:\Users\HARSHITH\Desktop\Sahanmi_SOC\ElectroComManagementSystem\ElectroComManagementSystem\obj\Debug\ElectroComManagementSystem.exe
+C:\Users\HARSHITH\Desktop\Sahanmi_SOC\ElectroComManagementSystem\ElectroComManagementSystem\obj\Debug\ElectroComManagementSystem.pdb

@@ -1,0 +1,378 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\GadgetHubAPI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5E692E4C-B7BE-4676-A588-163C126CA258}|GadgetHubAPI\\GadgetHubAPI.csproj|c:\\users\\sh_ma\\onedrive\\desktop\\sahanmi_soc\\gadgethubapi\\gadgethubapi\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E692E4C-B7BE-4676-A588-163C126CA258}|GadgetHubAPI\\GadgetHubAPI.csproj|solutionrelative:gadgethubapi\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E692E4C-B7BE-4676-A588-163C126CA258}|GadgetHubAPI\\GadgetHubAPI.csproj|c:\\users\\sh_ma\\onedrive\\desktop\\sahanmi_soc\\gadgethubapi\\gadgethubapi\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E692E4C-B7BE-4676-A588-163C126CA258}|GadgetHubAPI\\GadgetHubAPI.csproj|solutionrelative:gadgethubapi\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\GadgetHubAPI\\GadgetHubAPI\\Migrations\\20251020141736_first.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:GadgetHubAPI\\Migrations\\20251020141736_first.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E692E4C-B7BE-4676-A588-163C126CA258}|GadgetHubAPI\\GadgetHubAPI.csproj|c:\\users\\sh_ma\\onedrive\\desktop\\sahanmi_soc\\gadgethubapi\\gadgethubapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{5E692E4C-B7BE-4676-A588-163C126CA258}|GadgetHubAPI\\GadgetHubAPI.csproj|solutionrelative:gadgethubapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E692E4C-B7BE-4676-A588-163C126CA258}|GadgetHubAPI\\GadgetHubAPI.csproj|c:\\users\\sh_ma\\onedrive\\desktop\\sahanmi_soc\\gadgethubapi\\gadgethubapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E692E4C-B7BE-4676-A588-163C126CA258}|GadgetHubAPI\\GadgetHubAPI.csproj|solutionrelative:gadgethubapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E692E4C-B7BE-4676-A588-163C126CA258}|GadgetHubAPI\\GadgetHubAPI.csproj|c:\\users\\sh_ma\\onedrive\\desktop\\sahanmi_soc\\gadgethubapi\\gadgethubapi\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E692E4C-B7BE-4676-A588-163C126CA258}|GadgetHubAPI\\GadgetHubAPI.csproj|solutionrelative:gadgethubapi\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E692E4C-B7BE-4676-A588-163C126CA258}|GadgetHubAPI\\GadgetHubAPI.csproj|c:\\users\\sh_ma\\onedrive\\desktop\\sahanmi_soc\\gadgethubapi\\gadgethubapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E692E4C-B7BE-4676-A588-163C126CA258}|GadgetHubAPI\\GadgetHubAPI.csproj|solutionrelative:gadgethubapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\GadgetHubAPI\\GadgetHubAPI\\Migrations\\20251019202651_first.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:GadgetHubAPI\\Migrations\\20251019202651_first.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E692E4C-B7BE-4676-A588-163C126CA258}|GadgetHubAPI\\GadgetHubAPI.csproj|c:\\users\\sh_ma\\onedrive\\desktop\\sahanmi_soc\\gadgethubapi\\gadgethubapi\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E692E4C-B7BE-4676-A588-163C126CA258}|GadgetHubAPI\\GadgetHubAPI.csproj|solutionrelative:gadgethubapi\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\GadgetHubAPI\\GadgetHubAPI\\Migrations\\20251019181637_first.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:GadgetHubAPI\\Migrations\\20251019181637_first.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E692E4C-B7BE-4676-A588-163C126CA258}|GadgetHubAPI\\GadgetHubAPI.csproj|c:\\users\\sh_ma\\onedrive\\desktop\\sahanmi_soc\\gadgethubapi\\gadgethubapi\\models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E692E4C-B7BE-4676-A588-163C126CA258}|GadgetHubAPI\\GadgetHubAPI.csproj|solutionrelative:gadgethubapi\\models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E692E4C-B7BE-4676-A588-163C126CA258}|GadgetHubAPI\\GadgetHubAPI.csproj|c:\\users\\sh_ma\\onedrive\\desktop\\sahanmi_soc\\gadgethubapi\\gadgethubapi\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E692E4C-B7BE-4676-A588-163C126CA258}|GadgetHubAPI\\GadgetHubAPI.csproj|solutionrelative:gadgethubapi\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\GadgetHubAPI\\GadgetHubAPI\\Migrations\\20251019161038_first.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:GadgetHubAPI\\Migrations\\20251019161038_first.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\GadgetHubAPI\\GadgetHubAPI\\Migrations\\20251019155303_first.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:GadgetHubAPI\\Migrations\\20251019155303_first.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E692E4C-B7BE-4676-A588-163C126CA258}|GadgetHubAPI\\GadgetHubAPI.csproj|c:\\users\\sh_ma\\onedrive\\desktop\\sahanmi_soc\\gadgethubapi\\gadgethubapi\\services\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E692E4C-B7BE-4676-A588-163C126CA258}|GadgetHubAPI\\GadgetHubAPI.csproj|solutionrelative:gadgethubapi\\services\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\GadgetHubAPI\\GadgetHubAPI\\Migrations\\20251019154932_first.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:GadgetHubAPI\\Migrations\\20251019154932_first.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E692E4C-B7BE-4676-A588-163C126CA258}|GadgetHubAPI\\GadgetHubAPI.csproj|c:\\users\\sh_ma\\onedrive\\desktop\\sahanmi_soc\\gadgethubapi\\gadgethubapi\\services\\quotationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E692E4C-B7BE-4676-A588-163C126CA258}|GadgetHubAPI\\GadgetHubAPI.csproj|solutionrelative:gadgethubapi\\services\\quotationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E692E4C-B7BE-4676-A588-163C126CA258}|GadgetHubAPI\\GadgetHubAPI.csproj|c:\\users\\sh_ma\\onedrive\\desktop\\sahanmi_soc\\gadgethubapi\\gadgethubapi\\controllers\\quotationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E692E4C-B7BE-4676-A588-163C126CA258}|GadgetHubAPI\\GadgetHubAPI.csproj|solutionrelative:gadgethubapi\\controllers\\quotationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\GadgetHubAPI\\GadgetHubAPI\\Migrations\\20251018093456_first.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:GadgetHubAPI\\Migrations\\20251018093456_first.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E692E4C-B7BE-4676-A588-163C126CA258}|GadgetHubAPI\\GadgetHubAPI.csproj|c:\\users\\sh_ma\\onedrive\\desktop\\sahanmi_soc\\gadgethubapi\\gadgethubapi\\gadgethubapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{5E692E4C-B7BE-4676-A588-163C126CA258}|GadgetHubAPI\\GadgetHubAPI.csproj|solutionrelative:gadgethubapi\\gadgethubapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\GadgetHubAPI\\GadgetHubAPI\\Migrations\\20251018085756_first.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:GadgetHubAPI\\Migrations\\20251018085756_first.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\GadgetHubAPI\\GadgetHubAPI\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "GadgetHubAPI\\Controllers\\ProductController.cs",
+              "ToolTip": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\GadgetHubAPI\\GadgetHubAPI\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "GadgetHubAPI\\Controllers\\ProductController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-20T16:52:32.764Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "20251020141736_first.cs",
+              "DocumentMoniker": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\GadgetHubAPI\\GadgetHubAPI\\Migrations\\20251020141736_first.cs",
+              "RelativeDocumentMoniker": "GadgetHubAPI\\Migrations\\20251020141736_first.cs",
+              "ToolTip": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\GadgetHubAPI\\GadgetHubAPI\\Migrations\\20251020141736_first.cs",
+              "RelativeToolTip": "GadgetHubAPI\\Migrations\\20251020141736_first.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-20T14:17:36.81Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\GadgetHubAPI\\GadgetHubAPI\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "GadgetHubAPI\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\GadgetHubAPI\\GadgetHubAPI\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "GadgetHubAPI\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAHIAAAAAAAAAAAAIwIsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-20T09:10:43.607Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Order.cs",
+              "DocumentMoniker": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\GadgetHubAPI\\GadgetHubAPI\\Models\\Order.cs",
+              "RelativeDocumentMoniker": "GadgetHubAPI\\Models\\Order.cs",
+              "ToolTip": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\GadgetHubAPI\\GadgetHubAPI\\Models\\Order.cs",
+              "RelativeToolTip": "GadgetHubAPI\\Models\\Order.cs",
+              "ViewState": "AgIAAIYAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-20T04:46:39.964Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\GadgetHubAPI\\GadgetHubAPI\\Models\\Product.cs",
+              "RelativeDocumentMoniker": "GadgetHubAPI\\Models\\Product.cs",
+              "ToolTip": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\GadgetHubAPI\\GadgetHubAPI\\Models\\Product.cs",
+              "RelativeToolTip": "GadgetHubAPI\\Models\\Product.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-19T20:21:57.151Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "NotificationService.cs",
+              "DocumentMoniker": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\GadgetHubAPI\\GadgetHubAPI\\Services\\NotificationService.cs",
+              "RelativeDocumentMoniker": "GadgetHubAPI\\Services\\NotificationService.cs",
+              "ToolTip": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\GadgetHubAPI\\GadgetHubAPI\\Services\\NotificationService.cs",
+              "RelativeToolTip": "GadgetHubAPI\\Services\\NotificationService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-19T15:50:39.479Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\GadgetHubAPI\\GadgetHubAPI\\Program.cs",
+              "RelativeDocumentMoniker": "GadgetHubAPI\\Program.cs",
+              "ToolTip": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\GadgetHubAPI\\GadgetHubAPI\\Program.cs",
+              "RelativeToolTip": "GadgetHubAPI\\Program.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAAAFAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T08:40:38.746Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\GadgetHubAPI\\GadgetHubAPI\\appsettings.json",
+              "RelativeDocumentMoniker": "GadgetHubAPI\\appsettings.json",
+              "ToolTip": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\GadgetHubAPI\\GadgetHubAPI\\appsettings.json",
+              "RelativeToolTip": "GadgetHubAPI\\appsettings.json",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA0AAACgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-18T08:46:55.749Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "20251019202651_first.cs",
+              "DocumentMoniker": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\GadgetHubAPI\\GadgetHubAPI\\Migrations\\20251019202651_first.cs",
+              "RelativeDocumentMoniker": "GadgetHubAPI\\Migrations\\20251019202651_first.cs",
+              "ToolTip": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\GadgetHubAPI\\GadgetHubAPI\\Migrations\\20251019202651_first.cs",
+              "RelativeToolTip": "GadgetHubAPI\\Migrations\\20251019202651_first.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-19T20:26:52.01Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "20251019154932_first.cs",
+              "DocumentMoniker": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\GadgetHubAPI\\GadgetHubAPI\\Migrations\\20251019154932_first.cs",
+              "RelativeDocumentMoniker": "GadgetHubAPI\\Migrations\\20251019154932_first.cs",
+              "ToolTip": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\GadgetHubAPI\\GadgetHubAPI\\Migrations\\20251019154932_first.cs",
+              "RelativeToolTip": "GadgetHubAPI\\Migrations\\20251019154932_first.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-19T15:49:32.566Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\GadgetHubAPI\\GadgetHubAPI\\Models\\User.cs",
+              "RelativeDocumentMoniker": "GadgetHubAPI\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\GadgetHubAPI\\GadgetHubAPI\\Models\\User.cs",
+              "RelativeToolTip": "GadgetHubAPI\\Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-19T15:42:23.018Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\GadgetHubAPI\\GadgetHubAPI\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "GadgetHubAPI\\Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\GadgetHubAPI\\GadgetHubAPI\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "GadgetHubAPI\\Data\\AppDbContext.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAA4wCcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T07:21:21.27Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "20251019161038_first.cs",
+              "DocumentMoniker": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\GadgetHubAPI\\GadgetHubAPI\\Migrations\\20251019161038_first.cs",
+              "RelativeDocumentMoniker": "GadgetHubAPI\\Migrations\\20251019161038_first.cs",
+              "ToolTip": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\GadgetHubAPI\\GadgetHubAPI\\Migrations\\20251019161038_first.cs",
+              "RelativeToolTip": "GadgetHubAPI\\Migrations\\20251019161038_first.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-19T16:10:38.982Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "20251019155303_first.cs",
+              "DocumentMoniker": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\GadgetHubAPI\\GadgetHubAPI\\Migrations\\20251019155303_first.cs",
+              "RelativeDocumentMoniker": "GadgetHubAPI\\Migrations\\20251019155303_first.cs",
+              "ToolTip": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\GadgetHubAPI\\GadgetHubAPI\\Migrations\\20251019155303_first.cs",
+              "RelativeToolTip": "GadgetHubAPI\\Migrations\\20251019155303_first.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-19T15:53:03.789Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Customer.cs",
+              "DocumentMoniker": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\GadgetHubAPI\\GadgetHubAPI\\Models\\Customer.cs",
+              "RelativeDocumentMoniker": "GadgetHubAPI\\Models\\Customer.cs",
+              "ToolTip": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\GadgetHubAPI\\GadgetHubAPI\\Models\\Customer.cs",
+              "RelativeToolTip": "GadgetHubAPI\\Models\\Customer.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABoAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-19T16:21:44.965Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "20251019181637_first.cs",
+              "DocumentMoniker": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\GadgetHubAPI\\GadgetHubAPI\\Migrations\\20251019181637_first.cs",
+              "RelativeDocumentMoniker": "GadgetHubAPI\\Migrations\\20251019181637_first.cs",
+              "ToolTip": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\GadgetHubAPI\\GadgetHubAPI\\Migrations\\20251019181637_first.cs",
+              "RelativeToolTip": "GadgetHubAPI\\Migrations\\20251019181637_first.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-19T18:16:37.378Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Microsoft.Common.CurrentVersion.targets",
+              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ViewState": "AgIAAKEUAAAAAAAAAAAgwBEVAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2025-10-18T15:16:45.206Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "20251018093456_first.cs",
+              "DocumentMoniker": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\GadgetHubAPI\\GadgetHubAPI\\Migrations\\20251018093456_first.cs",
+              "RelativeDocumentMoniker": "GadgetHubAPI\\Migrations\\20251018093456_first.cs",
+              "ToolTip": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\GadgetHubAPI\\GadgetHubAPI\\Migrations\\20251018093456_first.cs",
+              "RelativeToolTip": "GadgetHubAPI\\Migrations\\20251018093456_first.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T09:34:56.645Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "20251018085756_first.cs",
+              "DocumentMoniker": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\GadgetHubAPI\\GadgetHubAPI\\Migrations\\20251018085756_first.cs",
+              "RelativeDocumentMoniker": "GadgetHubAPI\\Migrations\\20251018085756_first.cs",
+              "ToolTip": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\GadgetHubAPI\\GadgetHubAPI\\Migrations\\20251018085756_first.cs",
+              "RelativeToolTip": "GadgetHubAPI\\Migrations\\20251018085756_first.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T08:57:56.89Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "QuotationService.cs",
+              "DocumentMoniker": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\GadgetHubAPI\\GadgetHubAPI\\Services\\QuotationService.cs",
+              "RelativeDocumentMoniker": "GadgetHubAPI\\Services\\QuotationService.cs",
+              "ToolTip": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\GadgetHubAPI\\GadgetHubAPI\\Services\\QuotationService.cs",
+              "RelativeToolTip": "GadgetHubAPI\\Services\\QuotationService.cs",
+              "ViewState": "AgIAAFkAAAAAAAAAAAAYwHcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T10:23:50.644Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "QuotationController.cs",
+              "DocumentMoniker": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\GadgetHubAPI\\GadgetHubAPI\\Controllers\\QuotationController.cs",
+              "RelativeDocumentMoniker": "GadgetHubAPI\\Controllers\\QuotationController.cs",
+              "ToolTip": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\GadgetHubAPI\\GadgetHubAPI\\Controllers\\QuotationController.cs",
+              "RelativeToolTip": "GadgetHubAPI\\Controllers\\QuotationController.cs",
+              "ViewState": "AgIAAAoAAAAgzczMzIwrwBIAAABYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T10:24:48.169Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "GadgetHubAPI.csproj",
+              "DocumentMoniker": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\GadgetHubAPI\\GadgetHubAPI\\GadgetHubAPI.csproj",
+              "RelativeDocumentMoniker": "GadgetHubAPI\\GadgetHubAPI.csproj",
+              "ToolTip": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\GadgetHubAPI\\GadgetHubAPI\\GadgetHubAPI.csproj",
+              "RelativeToolTip": "GadgetHubAPI\\GadgetHubAPI.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-10-18T07:28:23.764Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "ContainingType": "GadgetHubClient.Controllers.AuthController",
+    "Method": "CheckLoginStatus",
+    "RelativePath": "api/Auth/check",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GadgetHubClient.Controllers.AuthController",
+    "Method": "GetCustomerDetails",
+    "RelativePath": "api/Auth/customer",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

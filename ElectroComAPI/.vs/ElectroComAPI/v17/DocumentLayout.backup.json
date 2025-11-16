@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\ElectroComAPI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{45335419-ECD1-4C77-8993-1BA098EAEDB1}|ElectroComAPI\\ElectroComAPI.csproj|c:\\users\\sh_ma\\onedrive\\desktop\\sahanmi_soc\\electrocomapi\\electrocomapi\\migrations\\20251020140710_first.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45335419-ECD1-4C77-8993-1BA098EAEDB1}|ElectroComAPI\\ElectroComAPI.csproj|solutionrelative:electrocomapi\\migrations\\20251020140710_first.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45335419-ECD1-4C77-8993-1BA098EAEDB1}|ElectroComAPI\\ElectroComAPI.csproj|c:\\users\\sh_ma\\onedrive\\desktop\\sahanmi_soc\\electrocomapi\\electrocomapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{45335419-ECD1-4C77-8993-1BA098EAEDB1}|ElectroComAPI\\ElectroComAPI.csproj|solutionrelative:electrocomapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45335419-ECD1-4C77-8993-1BA098EAEDB1}|ElectroComAPI\\ElectroComAPI.csproj|c:\\users\\sh_ma\\onedrive\\desktop\\sahanmi_soc\\electrocomapi\\electrocomapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45335419-ECD1-4C77-8993-1BA098EAEDB1}|ElectroComAPI\\ElectroComAPI.csproj|solutionrelative:electrocomapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "20251020140710_first.cs",
+              "DocumentMoniker": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\ElectroComAPI\\ElectroComAPI\\Migrations\\20251020140710_first.cs",
+              "RelativeDocumentMoniker": "ElectroComAPI\\Migrations\\20251020140710_first.cs",
+              "ToolTip": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\ElectroComAPI\\ElectroComAPI\\Migrations\\20251020140710_first.cs",
+              "RelativeToolTip": "ElectroComAPI\\Migrations\\20251020140710_first.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-20T14:07:11.01Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\ElectroComAPI\\ElectroComAPI\\Program.cs",
+              "RelativeDocumentMoniker": "ElectroComAPI\\Program.cs",
+              "ToolTip": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\ElectroComAPI\\ElectroComAPI\\Program.cs",
+              "RelativeToolTip": "ElectroComAPI\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T12:47:34.9Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\ElectroComAPI\\ElectroComAPI\\appsettings.json",
+              "RelativeDocumentMoniker": "ElectroComAPI\\appsettings.json",
+              "ToolTip": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\ElectroComAPI\\ElectroComAPI\\appsettings.json",
+              "RelativeToolTip": "ElectroComAPI\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAACMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-18T12:46:25.3Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

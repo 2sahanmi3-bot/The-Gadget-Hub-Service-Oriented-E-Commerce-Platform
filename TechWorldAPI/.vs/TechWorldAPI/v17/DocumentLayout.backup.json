@@ -1,0 +1,190 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\TechWorldAPI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{24E24CA9-408C-4C56-9D8B-2D7035F2DA72}|TechWorldAPI\\TechWorldAPI.csproj|c:\\users\\sh_ma\\onedrive\\desktop\\sahanmi_soc\\techworldapi\\techworldapi\\migrations\\20251020141420_first.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{24E24CA9-408C-4C56-9D8B-2D7035F2DA72}|TechWorldAPI\\TechWorldAPI.csproj|solutionrelative:techworldapi\\migrations\\20251020141420_first.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24E24CA9-408C-4C56-9D8B-2D7035F2DA72}|TechWorldAPI\\TechWorldAPI.csproj|c:\\users\\sh_ma\\onedrive\\desktop\\sahanmi_soc\\techworldapi\\techworldapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{24E24CA9-408C-4C56-9D8B-2D7035F2DA72}|TechWorldAPI\\TechWorldAPI.csproj|solutionrelative:techworldapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24E24CA9-408C-4C56-9D8B-2D7035F2DA72}|TechWorldAPI\\TechWorldAPI.csproj|c:\\users\\sh_ma\\onedrive\\desktop\\sahanmi_soc\\techworldapi\\techworldapi\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{24E24CA9-408C-4C56-9D8B-2D7035F2DA72}|TechWorldAPI\\TechWorldAPI.csproj|solutionrelative:techworldapi\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24E24CA9-408C-4C56-9D8B-2D7035F2DA72}|TechWorldAPI\\TechWorldAPI.csproj|c:\\users\\sh_ma\\onedrive\\desktop\\sahanmi_soc\\techworldapi\\techworldapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{24E24CA9-408C-4C56-9D8B-2D7035F2DA72}|TechWorldAPI\\TechWorldAPI.csproj|solutionrelative:techworldapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24E24CA9-408C-4C56-9D8B-2D7035F2DA72}|TechWorldAPI\\TechWorldAPI.csproj|c:\\users\\sh_ma\\onedrive\\desktop\\sahanmi_soc\\techworldapi\\techworldapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{24E24CA9-408C-4C56-9D8B-2D7035F2DA72}|TechWorldAPI\\TechWorldAPI.csproj|solutionrelative:techworldapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24E24CA9-408C-4C56-9D8B-2D7035F2DA72}|TechWorldAPI\\TechWorldAPI.csproj|c:\\users\\sh_ma\\onedrive\\desktop\\sahanmi_soc\\techworldapi\\techworldapi\\controllers\\quotationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{24E24CA9-408C-4C56-9D8B-2D7035F2DA72}|TechWorldAPI\\TechWorldAPI.csproj|solutionrelative:techworldapi\\controllers\\quotationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24E24CA9-408C-4C56-9D8B-2D7035F2DA72}|TechWorldAPI\\TechWorldAPI.csproj|c:\\users\\sh_ma\\onedrive\\desktop\\sahanmi_soc\\techworldapi\\techworldapi\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{24E24CA9-408C-4C56-9D8B-2D7035F2DA72}|TechWorldAPI\\TechWorldAPI.csproj|solutionrelative:techworldapi\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24E24CA9-408C-4C56-9D8B-2D7035F2DA72}|TechWorldAPI\\TechWorldAPI.csproj|c:\\users\\sh_ma\\onedrive\\desktop\\sahanmi_soc\\techworldapi\\techworldapi\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{24E24CA9-408C-4C56-9D8B-2D7035F2DA72}|TechWorldAPI\\TechWorldAPI.csproj|solutionrelative:techworldapi\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24E24CA9-408C-4C56-9D8B-2D7035F2DA72}|TechWorldAPI\\TechWorldAPI.csproj|c:\\users\\sh_ma\\onedrive\\desktop\\sahanmi_soc\\techworldapi\\techworldapi\\dto\\quotationrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{24E24CA9-408C-4C56-9D8B-2D7035F2DA72}|TechWorldAPI\\TechWorldAPI.csproj|solutionrelative:techworldapi\\dto\\quotationrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24E24CA9-408C-4C56-9D8B-2D7035F2DA72}|TechWorldAPI\\TechWorldAPI.csproj|c:\\users\\sh_ma\\onedrive\\desktop\\sahanmi_soc\\techworldapi\\techworldapi\\dto\\quotationresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{24E24CA9-408C-4C56-9D8B-2D7035F2DA72}|TechWorldAPI\\TechWorldAPI.csproj|solutionrelative:techworldapi\\dto\\quotationresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "20251020141420_first.cs",
+              "DocumentMoniker": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\TechWorldAPI\\TechWorldAPI\\Migrations\\20251020141420_first.cs",
+              "RelativeDocumentMoniker": "TechWorldAPI\\Migrations\\20251020141420_first.cs",
+              "ToolTip": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\TechWorldAPI\\TechWorldAPI\\Migrations\\20251020141420_first.cs",
+              "RelativeToolTip": "TechWorldAPI\\Migrations\\20251020141420_first.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-20T14:14:20.804Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\TechWorldAPI\\TechWorldAPI\\appsettings.json",
+              "RelativeDocumentMoniker": "TechWorldAPI\\appsettings.json",
+              "ToolTip": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\TechWorldAPI\\TechWorldAPI\\appsettings.json",
+              "RelativeToolTip": "TechWorldAPI\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAACLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-18T06:22:01.535Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\TechWorldAPI\\TechWorldAPI\\Program.cs",
+              "RelativeDocumentMoniker": "TechWorldAPI\\Program.cs",
+              "ToolTip": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\TechWorldAPI\\TechWorldAPI\\Program.cs",
+              "RelativeToolTip": "TechWorldAPI\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T06:21:00.089Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\TechWorldAPI\\TechWorldAPI\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "TechWorldAPI\\Controllers\\ProductController.cs",
+              "ToolTip": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\TechWorldAPI\\TechWorldAPI\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "TechWorldAPI\\Controllers\\ProductController.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAcwD4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T06:20:22.046Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "QuotationController.cs",
+              "DocumentMoniker": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\TechWorldAPI\\TechWorldAPI\\Controllers\\QuotationController.cs",
+              "RelativeDocumentMoniker": "TechWorldAPI\\Controllers\\QuotationController.cs",
+              "ToolTip": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\TechWorldAPI\\TechWorldAPI\\Controllers\\QuotationController.cs",
+              "RelativeToolTip": "TechWorldAPI\\Controllers\\QuotationController.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAMwBkAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T05:59:33.883Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\TechWorldAPI\\TechWorldAPI\\Models\\Product.cs",
+              "RelativeDocumentMoniker": "TechWorldAPI\\Models\\Product.cs",
+              "ToolTip": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\TechWorldAPI\\TechWorldAPI\\Models\\Product.cs",
+              "RelativeToolTip": "TechWorldAPI\\Models\\Product.cs",
+              "ViewState": "AgIAAAUAAABQZmZmZgY8wA4AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T12:37:49.655Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\TechWorldAPI\\TechWorldAPI\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "TechWorldAPI\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\TechWorldAPI\\TechWorldAPI\\Properties\\launchSettings.json",
+              "RelativeToolTip": "TechWorldAPI\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-20T06:11:56.561Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\TechWorldAPI\\TechWorldAPI\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "TechWorldAPI\\Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\TechWorldAPI\\TechWorldAPI\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "TechWorldAPI\\Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T05:53:16.243Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "QuotationResponseDTO.cs",
+              "DocumentMoniker": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\TechWorldAPI\\TechWorldAPI\\DTO\\QuotationResponseDTO.cs",
+              "RelativeDocumentMoniker": "TechWorldAPI\\DTO\\QuotationResponseDTO.cs",
+              "ToolTip": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\TechWorldAPI\\TechWorldAPI\\DTO\\QuotationResponseDTO.cs",
+              "RelativeToolTip": "TechWorldAPI\\DTO\\QuotationResponseDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T05:51:34.477Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "QuotationRequestDTO.cs",
+              "DocumentMoniker": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\TechWorldAPI\\TechWorldAPI\\DTO\\QuotationRequestDTO.cs",
+              "RelativeDocumentMoniker": "TechWorldAPI\\DTO\\QuotationRequestDTO.cs",
+              "ToolTip": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\TechWorldAPI\\TechWorldAPI\\DTO\\QuotationRequestDTO.cs",
+              "RelativeToolTip": "TechWorldAPI\\DTO\\QuotationRequestDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T05:50:07.824Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

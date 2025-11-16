@@ -1,0 +1,271 @@
+@page
+@model GadgetHubClient.Pages.ContactModel
+@{
+    ViewData["Title"] = "Contact Us - The Gadget Hub";
+}
+
+<!-- Hero Section -->
+<section class="contact-hero bg-primary text-white py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <h1 class="display-4 fw-bold mb-3">Contact Us</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb mb-0">
+                        <li class="breadcrumb-item"><a href="/" class="text-white text-decoration-none">Home</a></li>
+                        <li class="breadcrumb-item active text-white-50" aria-current="page">Contact Us</li>
+                    </ol>
+                </nav>
+            </div>
+            <div class="col-lg-4 text-lg-end">
+                <div class="contact-stats">
+                    <div class="row text-center">
+                        <div class="col-4">
+                            <h4 class="fw-bold mb-0">24/7</h4>
+                            <small>Support</small>
+                        </div>
+                        <div class="col-4">
+                            <h4 class="fw-bold mb-0">< 2h</h4>
+                            <small>Response</small>
+                        </div>
+                        <div class="col-4">
+                            <h4 class="fw-bold mb-0">100%</h4>
+                            <small>Satisfaction</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Main Content -->
+<section class="main-content-section py-5">
+    <div class="container">
+        <!-- Contact Form Section -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <div class="contact-card bg-white rounded-3 shadow-lg p-5">
+                    <div class="row">
+                        <!-- Left Column - Contact Info -->
+                        <div class="col-lg-6">
+                            <div class="contact-info-section">
+                                <h2 class="fw-bold text-dark mb-4">Get in touch</h2>
+                                <p class="text-muted mb-4">
+                                    Have questions or need support? Our team is here to help with orders, products, or general inquiries. 
+                                    Reach out — we'd love to hear from you!
+                                </p>
+                                
+                                <div class="contact-methods">
+                                    <div class="contact-method d-flex align-items-start mb-4">
+                                        <div class="contact-icon me-3">
+                                            <i class="fas fa-map-marker-alt text-primary"></i>
+                                        </div>
+                                        <div>
+                                            <h6 class="fw-bold text-dark mb-1">Head office</h6>
+                                            <p class="text-muted mb-0">Colombo, Sri Lanka</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="contact-method d-flex align-items-start mb-4">
+                                        <div class="contact-icon me-3">
+                                            <i class="fas fa-envelope text-primary"></i>
+                                        </div>
+                                        <div>
+                                            <h6 class="fw-bold text-dark mb-1">Email us</h6>
+                                            <p class="text-muted mb-0">info@gadgethub.lk</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="contact-method d-flex align-items-start">
+                                        <div class="contact-icon me-3">
+                                            <i class="fas fa-phone text-primary"></i>
+                                        </div>
+                                        <div>
+                                            <h6 class="fw-bold text-dark mb-1">Call us</h6>
+                                            <p class="text-muted mb-0">+94 11 234 5678</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Right Column - Contact Form -->
+                        <div class="col-lg-6">
+                            <div class="contact-form-section">
+                                <h2 class="fw-bold text-dark mb-4">We're Here for You</h2>
+                                <p class="text-muted mb-4">
+                                    Fill out the form below and our support team will get back to you as soon as possible. 
+                                    Fast, friendly, and always ready to help.
+                                </p>
+                                
+                                <form id="contactForm" class="contact-form">
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="contactName" class="form-label fw-semibold text-dark">Name</label>
+                                            <input type="text" class="form-control contact-input" id="contactName" placeholder="Name" required>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="contactCompany" class="form-label fw-semibold text-dark">Company</label>
+                                            <input type="text" class="form-control contact-input" id="contactCompany" placeholder="Company">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="contactEmail" class="form-label fw-semibold text-dark">Email</label>
+                                            <input type="email" class="form-control contact-input" id="contactEmail" placeholder="Email" required>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="contactPhone" class="form-label fw-semibold text-dark">Phone</label>
+                                            <input type="tel" class="form-control contact-input" id="contactPhone" placeholder="Phone">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="mb-3">
+                                        <label for="contactSubject" class="form-label fw-semibold text-dark">Subject</label>
+                                        <input type="text" class="form-control contact-input" id="contactSubject" placeholder="Subject" required>
+                                    </div>
+                                    
+                                    <div class="mb-4">
+                                        <label for="contactMessage" class="form-label fw-semibold text-dark">Message</label>
+                                        <textarea class="form-control contact-input" id="contactMessage" rows="4" placeholder="Message" required></textarea>
+                                    </div>
+                                    
+                                    <div class="d-grid">
+                                        <button type="submit" class="btn btn-primary btn-lg contact-submit-btn">
+                                            <i class="fas fa-paper-plane me-2"></i>Send Message
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Map Section -->
+        <div class="row">
+            <div class="col-12">
+                <div class="map-section">
+                    <div class="map-container rounded-3 overflow-hidden shadow-lg">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.923!2d79.8612!3d6.9271!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2593cf65a1e9d%3A0xe13da4b295e0f607!2sColombo%2C%20Sri%20Lanka!5e0!3m2!1sen!2slk!4v1645123456789!5m2!1sen!2slk" 
+                            width="100%" 
+                            height="500" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Floating Chat Widget -->
+<div class="floating-chat-widget">
+    <div class="chat-widget-content">
+        <div class="chat-text">
+            <span>Need Help? Chat with us</span>
+        </div>
+        <div class="chat-button">
+            <a href="https://wa.me/94771234567" target="_blank" class="whatsapp-btn">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const submitBtn = this.querySelector('.contact-submit-btn');
+            const originalText = submitBtn.innerHTML;
+            
+            // Show loading state
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Sending...';
+            
+            // Simulate form submission
+            setTimeout(() => {
+                // Show success message
+                showNotification('Thank you for your message! We\'ll get back to you within 2 hours.', 'success');
+                
+                // Reset form
+                this.reset();
+                
+                // Reset button
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalText;
+            }, 2000);
+        });
+        
+        function showNotification(message, type) {
+            const notification = document.createElement('div');
+            notification.className = `alert alert-${type === 'error' ? 'danger' : type} alert-dismissible fade show position-fixed`;
+            notification.style.cssText = 'top: 20px; right: 20px; z-index: 9999; min-width: 350px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);';
+            notification.innerHTML = `
+                <div class="d-flex align-items-center">
+                    <i class="fas fa-${type === 'success' ? 'check-circle' : 'info-circle'} me-2"></i>
+                    ${message}
+                </div>
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            `;
+            
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                if (notification.parentNode) {
+                    notification.parentNode.removeChild(notification);
+                }
+            }, 5000);
+        }
+        
+        // Form validation
+        document.querySelectorAll('.contact-input').forEach(input => {
+            input.addEventListener('blur', function() {
+                validateField(this);
+            });
+        });
+        
+        function validateField(field) {
+            const value = field.value.trim();
+            field.classList.remove('is-valid', 'is-invalid');
+            
+            if (field.hasAttribute('required') && value === '') {
+                field.classList.add('is-invalid');
+                return false;
+            }
+            
+            if (field.type === 'email' && value !== '') {
+                if (!isValidEmail(value)) {
+                    field.classList.add('is-invalid');
+                    return false;
+                }
+            }
+            
+            if (value !== '') {
+                field.classList.add('is-valid');
+            }
+            
+            return true;
+        }
+        
+        function isValidEmail(email) {
+            const atSymbol = String.fromCharCode(64);
+            const dotIndex = email.lastIndexOf('.');
+            const atIndex = email.indexOf(atSymbol);
+            
+            if (atIndex <= 0 || atIndex >= email.length - 1) return false;
+            if (dotIndex <= atIndex || dotIndex >= email.length - 1) return false;
+            
+            return true;
+        }
+    </script>
+}

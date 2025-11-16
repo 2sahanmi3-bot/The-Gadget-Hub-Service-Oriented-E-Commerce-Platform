@@ -1,0 +1,754 @@
+/* Modern Tech + Minimalist White Theme */
+:root {
+    --primary-color: #0A84FF;
+    --secondary-color: #1C1C1E;
+    --accent-color: #FFD60A;
+    --background-color: #F5F5F7;
+    --text-color: #2C2C2E;
+    --white: #FFFFFF;
+    --light-gray: #F2F2F7;
+    --border-color: #E5E5EA;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --success-color: #34C759;
+    --warning-color: #FF9500;
+    --danger-color: #FF3B30;
+}
+
+/* Global Styles */
+body {
+    background-color: var(--background-color) !important;
+    color: var(--text-color) !important;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Header Styles */
+.top-bar {
+    background: var(--primary-color) !important;
+    font-size: 0.9rem;
+}
+
+.navbar {
+    background: var(--white) !important;
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 2px 10px var(--shadow-color);
+}
+
+.navbar-brand {
+    font-size: 1.8rem !important;
+    font-weight: 700 !important;
+    color: var(--secondary-color) !important;
+}
+
+.navbar-nav .nav-link {
+    color: var(--text-color) !important;
+    font-weight: 600 !important;
+    padding: 0.5rem 1rem !important;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--primary-color) !important;
+}
+
+.search-container .form-control {
+    border-radius: 25px 0 0 25px;
+    border-right: none;
+    border-color: var(--border-color);
+    background: var(--light-gray);
+}
+
+.search-container .form-control:focus {
+    border-color: var(--primary-color);
+    background: var(--white);
+    box-shadow: 0 0 0 0.2rem rgba(10, 132, 255, 0.25);
+}
+
+.search-container .btn {
+    border-radius: 0 25px 25px 0;
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.search-container .btn:hover {
+    background: #007AFF;
+    border-color: #007AFF;
+}
+
+/* Brand Banner */
+.brand-banner {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #007AFF 100%);
+}
+
+.brand-icon {
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    content: ">>";
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.category-pills .badge {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    background: var(--white);
+    color: var(--primary-color);
+}
+
+/* Sidebar Styles */
+.sidebar-card {
+    background: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px var(--shadow-color);
+}
+
+.sidebar-card h6 {
+    color: var(--text-color);
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+}
+
+.form-check-input:checked {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.price-range .form-range {
+    height: 6px;
+}
+
+.price-range .form-range::-webkit-slider-thumb {
+    background: var(--primary-color);
+}
+
+.price-range .form-range::-moz-range-thumb {
+    background: var(--primary-color);
+}
+
+.top-products .product-item {
+    padding: 0.5rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.top-products .product-item:hover {
+    background: var(--light-gray);
+}
+
+.promo-banner {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #007AFF 100%);
+}
+
+/* Product Cards */
+.product-card {
+    transition: all 0.3s ease;
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--white);
+    border: 1px solid var(--border-color);
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px var(--shadow-color);
+}
+
+.product-card .card-img-top {
+    transition: all 0.3s ease;
+}
+
+.product-card:hover .card-img-top {
+    transform: scale(1.05);
+}
+
+.product-card .btn-primary {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.product-card .btn-primary:hover {
+    background: #007AFF;
+    border-color: #007AFF;
+}
+
+.rating i {
+    font-size: 0.8rem;
+    color: var(--accent-color);
+}
+
+/* Price Display */
+.price-primary {
+    color: var(--primary-color) !important;
+    font-weight: 700;
+}
+
+.price-strikethrough {
+    color: #8E8E93;
+    text-decoration: line-through;
+}
+
+/* Buttons */
+.btn-primary {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--white);
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: #007AFF;
+    border-color: #007AFF;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(10, 132, 255, 0.3);
+}
+
+.btn-outline-primary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+/* Pagination */
+.pagination .page-link {
+    color: var(--primary-color);
+    border-color: var(--border-color);
+    padding: 0.5rem 0.75rem;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.pagination .page-link:hover {
+    color: var(--primary-color);
+    background-color: var(--light-gray);
+    border-color: var(--border-color);
+}
+
+/* Contact Page Styles */
+.contact-hero {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #007AFF 100%);
+}
+
+.contact-stats h4 {
+    font-size: 1.5rem;
+}
+
+.contact-stats small {
+    font-size: 0.8rem;
+    opacity: 0.9;
+}
+
+.contact-card {
+    border: none;
+    background: var(--white);
+}
+
+.contact-info-section h2,
+.contact-form-section h2 {
+    font-size: 2rem;
+    color: var(--text-color);
+}
+
+.contact-method {
+    transition: all 0.3s ease;
+}
+
+.contact-method:hover {
+    transform: translateX(5px);
+}
+
+.contact-icon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    color: var(--primary-color);
+}
+
+.contact-input {
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    background: var(--light-gray);
+}
+
+.contact-input:focus {
+    border-color: var(--primary-color);
+    background: var(--white);
+    box-shadow: 0 0 0 0.2rem rgba(10, 132, 255, 0.25);
+}
+
+.contact-input.is-valid {
+    border-color: var(--success-color);
+    background: var(--white);
+}
+
+.contact-input.is-invalid {
+    border-color: var(--danger-color);
+    background: var(--white);
+}
+
+.contact-submit-btn {
+    background: linear-gradient(135deg, var(--primary-color), #007AFF);
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.contact-submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(10, 132, 255, 0.3);
+}
+
+.contact-submit-btn:disabled {
+    opacity: 0.7;
+    transform: none;
+}
+
+.map-section {
+    margin-top: 2rem;
+}
+
+.map-container {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px var(--shadow-color);
+}
+
+.map-container iframe {
+    border-radius: 12px;
+}
+
+/* Floating Chat Widget */
+.floating-chat-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    animation: float 3s ease-in-out infinite;
+}
+
+.chat-widget-content {
+    display: flex;
+    align-items: center;
+    background: var(--white);
+    border-radius: 25px;
+    padding: 8px 16px 8px 8px;
+    box-shadow: 0 4px 20px var(--shadow-color);
+    transition: all 0.3s ease;
+}
+
+.chat-widget-content:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+}
+
+.chat-text {
+    margin-right: 12px;
+}
+
+.chat-text span {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.whatsapp-btn {
+    width: 40px;
+    height: 40px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+    background: #128C7E;
+    color: var(--white);
+    transform: scale(1.1);
+}
+
+.whatsapp-btn i {
+    font-size: 1.2rem;
+}
+
+@@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Form Validation Styles */
+.form-label {
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.invalid-feedback {
+    display: block;
+    font-size: 0.875rem;
+    color: var(--danger-color);
+    margin-top: 0.25rem;
+}
+
+.valid-feedback {
+    display: block;
+    font-size: 0.875rem;
+    color: var(--success-color);
+    margin-top: 0.25rem;
+}
+
+/* Footer Styles */
+.footer-section {
+    background: var(--secondary-color) !important;
+}
+
+.footer-section .text-white {
+    color: var(--white) !important;
+}
+
+.footer-section .text-muted {
+    color: #8E8E93 !important;
+}
+
+.footer-section .text-primary {
+    color: var(--primary-color) !important;
+}
+
+/* Hero Section Styles */
+.hero-section {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #007AFF 100%);
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-badge {
+    display: inline-block;
+}
+
+.badge-text {
+    background: rgba(255, 255, 255, 0.2);
+    color: var(--accent-color);
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-weight: 600;
+    backdrop-filter: blur(10px);
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.hero-description {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+.hero-btn {
+    background: var(--accent-color);
+    border: none;
+    color: var(--secondary-color);
+    font-weight: 600;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.hero-btn:hover {
+    background: #FFC107;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 214, 10, 0.3);
+}
+
+.hero-image-container {
+    position: relative;
+}
+
+.hero-image-container img {
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Category Cards */
+.category-card {
+    transition: all 0.3s ease;
+    border-radius: 12px;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px var(--shadow-color);
+}
+
+.category-icon {
+    color: var(--primary-color);
+}
+
+/* Features Section */
+.features-section {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #007AFF 100%);
+}
+
+.feature-item {
+    padding: 1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-3px);
+}
+
+.feature-icon {
+    color: var(--accent-color);
+}
+
+/* Smart Living Section */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-line {
+    width: 50px;
+    height: 3px;
+    background: var(--accent-color);
+    margin: 0 1rem;
+}
+
+.section-description {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.category-tabs .btn {
+    border-radius: 25px;
+    padding: 0.5rem 1.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.category-tabs .btn.active {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--white);
+}
+
+/* Product Cards */
+.product-card {
+    transition: all 0.3s ease;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px var(--shadow-color);
+}
+
+.price-primary {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+/* Brand Logo Styles */
+.brand-logo {
+    width: 50px;
+    height: 50px;
+}
+
+.logo-icon {
+    width: 100%;
+    height: 100%;
+    background: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 1.5rem;
+}
+
+.brand-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+
+.brand-tagline {
+    font-size: 0.8rem;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+/* Search Container */
+.search-container .search-input {
+    border-radius: 25px 0 0 25px;
+    border-right: none;
+    border-color: var(--border-color);
+    background: var(--light-gray);
+    padding: 0.75rem 1rem;
+}
+
+.search-container .search-input:focus {
+    border-color: var(--primary-color);
+    background: var(--white);
+    box-shadow: 0 0 0 0.2rem rgba(10, 132, 255, 0.25);
+}
+
+.search-container .search-btn {
+    border-radius: 0 25px 25px 0;
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    padding: 0.75rem 1rem;
+}
+
+.search-container .search-btn:hover {
+    background: #007AFF;
+    border-color: #007AFF;
+}
+
+/* Mega Menu */
+.mega-menu {
+    border: none;
+    box-shadow: 0 4px 12px var(--shadow-color);
+    border-radius: 8px;
+    padding: 1rem 0;
+}
+
+.mega-menu .dropdown-item {
+    padding: 0.5rem 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.mega-menu .dropdown-item:hover {
+    background: var(--light-gray);
+    color: var(--primary-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .title-line {
+        width: 30px;
+        margin: 0 0.5rem;
+    }
+    
+    .brand-name {
+        font-size: 1.2rem;
+    }
+    
+    .brand-tagline {
+        font-size: 0.7rem;
+    }
+    
+    .navbar-brand {
+        font-size: 1.4rem !important;
+    }
+    
+    .search-container {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .contact-hero .display-4 {
+        font-size: 2rem;
+    }
+    
+    .contact-stats h4 {
+        font-size: 1.2rem;
+    }
+    
+    .contact-info-section h2,
+    .contact-form-section h2 {
+        font-size: 1.5rem;
+    }
+    
+    .contact-card {
+        padding: 2rem !important;
+    }
+    
+    .floating-chat-widget {
+        bottom: 15px;
+        right: 15px;
+    }
+    
+    .chat-widget-content {
+        padding: 6px 12px 6px 6px;
+    }
+    
+    .chat-text span {
+        font-size: 0.8rem;
+    }
+    
+    .whatsapp-btn {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .whatsapp-btn i {
+        font-size: 1rem;
+    }
+    
+    .category-tabs .btn {
+        font-size: 0.9rem;
+        padding: 0.4rem 1rem;
+    }
+}

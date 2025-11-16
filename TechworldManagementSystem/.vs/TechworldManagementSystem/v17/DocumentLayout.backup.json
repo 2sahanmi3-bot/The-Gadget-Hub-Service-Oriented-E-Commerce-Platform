@@ -1,0 +1,69 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\TechworldManagementSystem\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C4D673C8-755E-448E-B21E-ABA2258A1AB1}|TechworldManagementSystem\\TechworldManagementSystem.csproj|c:\\users\\sh_ma\\onedrive\\desktop\\sahanmi_soc\\techworldmanagementsystem\\techworldmanagementsystem\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4D673C8-755E-448E-B21E-ABA2258A1AB1}|TechworldManagementSystem\\TechworldManagementSystem.csproj|solutionrelative:techworldmanagementsystem\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4D673C8-755E-448E-B21E-ABA2258A1AB1}|TechworldManagementSystem\\TechworldManagementSystem.csproj|C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\TechworldManagementSystem\\techworldmanagementsystem\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C4D673C8-755E-448E-B21E-ABA2258A1AB1}|TechworldManagementSystem\\TechworldManagementSystem.csproj|solutionrelative:techworldmanagementsystem\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4D673C8-755E-448E-B21E-ABA2258A1AB1}|TechworldManagementSystem\\TechworldManagementSystem.csproj|C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\TechworldManagementSystem\\techworldmanagementsystem\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4D673C8-755E-448E-B21E-ABA2258A1AB1}|TechworldManagementSystem\\TechworldManagementSystem.csproj|solutionrelative:techworldmanagementsystem\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\TechworldManagementSystem\\TechworldManagementSystem\\Product.cs",
+              "RelativeDocumentMoniker": "TechworldManagementSystem\\Product.cs",
+              "ToolTip": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\TechworldManagementSystem\\TechworldManagementSystem\\Product.cs",
+              "RelativeToolTip": "TechworldManagementSystem\\Product.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-20T10:47:48.381Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\TechworldManagementSystem\\TechworldManagementSystem\\Form1.cs",
+              "RelativeDocumentMoniker": "TechworldManagementSystem\\Form1.cs",
+              "ToolTip": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\TechworldManagementSystem\\TechworldManagementSystem\\Form1.cs",
+              "RelativeToolTip": "TechworldManagementSystem\\Form1.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAnwBcAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-20T10:41:25.644Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\TechworldManagementSystem\\TechworldManagementSystem\\Form1.cs",
+              "RelativeDocumentMoniker": "TechworldManagementSystem\\Form1.cs",
+              "ToolTip": "C:\\Users\\SH_Ma\\OneDrive\\Desktop\\Sahanmi_SOC\\TechworldManagementSystem\\TechworldManagementSystem\\Form1.cs [Design]",
+              "RelativeToolTip": "TechworldManagementSystem\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-20T10:32:35.49Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

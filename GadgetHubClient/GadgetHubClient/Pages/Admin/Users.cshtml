@@ -1,0 +1,68 @@
+@page
+@model GadgetHubClient.Pages.Admin.UsersModel
+@{
+	ViewData["Title"] = "Manage Users";
+}
+
+<section class="py-5">
+	<div class="container">
+		<h2 class="mb-4">Customers</h2>
+
+		@if (!string.IsNullOrEmpty(Model.StatusMessage))
+		{
+			<div class="alert alert-@(Model.IsSuccess ? "success" : "danger")">@Model.StatusMessage</div>
+		}
+
+		@if (Model.Customers.Any())
+		{
+			<div class="card border-0 shadow-sm">
+				<div class="card-body">
+					<div class="table-responsive">
+						<table class="table table-hover align-middle">
+							<thead>
+								<tr>
+									<th style="width:80px;">ID</th>
+									<th>Name</th>
+									<th>Email</th>
+									<th>Phone</th>
+									<th>Address</th>
+									<th>UserId</th>
+									<th>Created</th>
+									<th class="text-end" style="width:110px;">Action</th>
+								</tr>
+							</thead>
+							<tbody>
+								@foreach (var c in Model.Customers)
+								{
+									<tr>
+										<td>@c.CustomerId</td>
+										<td>@c.Name</td>
+										<td>@c.Email</td>
+										<td>@c.PhoneNumber</td>
+										<td class="text-truncate" style="max-width:280px;">@c.Address</td>
+										<td>@c.UserId</td>
+										<td>@c.CreatedAt?.ToString("yyyy-MM-dd")</td>
+										<td class="text-end">
+											<form method="post" asp-page-handler="Delete" class="d-inline">
+												<input type="hidden" name="DeleteCustomerId" value="@c.CustomerId" />
+												<button type="submit" class="btn btn-sm btn-outline-danger"><i class="fas fa-trash"></i></button>
+											</form>
+										</td>
+									</tr>
+								}
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		}
+		else
+		{
+			<div class="text-center py-5">
+				<i class="fas fa-users fa-3x text-muted mb-3"></i>
+				<h5>No customers found</h5>
+				<p class="text-muted">Customers will appear once accounts are created.</p>
+			</div>
+		}
+	</div>
+</section>

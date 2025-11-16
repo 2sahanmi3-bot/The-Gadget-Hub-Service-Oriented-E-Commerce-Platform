@@ -1,0 +1,155 @@
+@page
+@model GadgetHubClient.Pages.Admin.DashboardModel
+@{
+    ViewData["Title"] = "Admin Dashboard - The Gadget Hub";
+}
+
+<!-- Admin Dashboard Hero Section -->
+<section class="admin-dashboard-hero bg-secondary text-white py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <h1 class="display-4 fw-bold mb-3">Admin Dashboard</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb mb-0">
+                        <li class="breadcrumb-item"><a href="/" class="text-white text-decoration-none">Home</a></li>
+                        <li class="breadcrumb-item active text-white-50" aria-current="page">Admin Dashboard</li>
+                    </ol>
+                </nav>
+            </div>
+            <div class="col-lg-4 text-lg-end">
+                <div class="admin-stats">
+                    <div class="row text-center">
+                        <div class="col-12">
+                            <h4 class="fw-bold mb-0">@Model.TotalProducts</h4>
+                            <small>Products</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Admin Dashboard Content -->
+<section class="admin-dashboard-content py-5 bg-white">
+    <div class="container">
+        <!-- Management Cards -->
+        <div class="row mb-5">
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="admin-card card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center">
+                        <div class="admin-icon mb-3">
+                            <i class="fas fa-box fa-3x text-primary"></i>
+                        </div>
+                        <h5 class="card-title">Product Management</h5>
+                        <p class="card-text text-muted">Manage products, inventory, and pricing</p>
+                        <a href="/Admin/Products" class="btn btn-primary">
+                            <i class="fas fa-cog me-2"></i>Manage Products
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="admin-card card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center">
+                        <div class="admin-icon mb-3">
+                            <i class="fas fa-user-shield fa-3x text-success"></i>
+                        </div>
+                        <h5 class="card-title">Manage Admin</h5>
+                        <p class="card-text text-muted">Create or remove admin accounts</p>
+                        <a href="/Admin/ManageAdmin" class="btn btn-success">
+                            <i class="fas fa-user-cog me-2"></i>Manage Admin
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="admin-card card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center">
+                        <div class="admin-icon mb-3">
+                            <i class="fas fa-list fa-3x text-warning"></i>
+                        </div>
+                        <h5 class="card-title">Order List</h5>
+                        <p class="card-text text-muted">View all orders in the system</p>
+                        <a href="/Admin/Orders" class="btn btn-warning">
+                            <i class="fas fa-list me-2"></i>View Orders
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="admin-card card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center">
+                        <div class="admin-icon mb-3">
+                            <i class="fas fa-users fa-3x text-info"></i>
+                        </div>
+                        <h5 class="card-title">Manage Users</h5>
+                        <p class="card-text text-muted">View and remove customers</p>
+                        <a href="/Admin/Users" class="btn btn-info">
+                            <i class="fas fa-users-cog me-2"></i>Manage Users
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recent Activity -->
+        <div class="row">
+            <div class="col-12 mb-4">
+                <div class="admin-card card border-0 shadow-sm">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0">
+                            <i class="fas fa-clock me-2"></i>Recent Orders
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        @if (Model.RecentOrders.Any())
+                        {
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Order ID</th>
+                                            <th>Customer</th>
+                                            <th>Date</th>
+                                            <th>Status</th>
+                                            <th>Total</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var order in Model.RecentOrders)
+                                        {
+                                            <tr>
+                                                <td>#@order.Id</td>
+                                                <td>@order.CustomerName</td>
+                                                <td>@order.CreatedAt.ToString("MMM dd, yyyy HH:mm")</td>
+                                                <td>
+                                                    <span class="badge bg-@(order.Status == "Completed" ? "success" : order.Status == "Pending" ? "warning" : order.Status == "Failed" ? "danger" : "info")">
+                                                        @order.Status
+                                                    </span>
+                                                </td>
+                                                <td>Rs. @order.Total.ToString("N2")</td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="text-center py-4">
+                                <i class="fas fa-receipt fa-3x text-muted mb-3"></i>
+                                <h5>No Recent Orders</h5>
+                                <p class="text-muted">Orders will appear here as customers place them.</p>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

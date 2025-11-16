@@ -1,0 +1,57 @@
+@page
+@model GadgetHubClient.Pages.Admin.ManageAdminModel
+@{
+	ViewData["Title"] = "Manage Admin";
+}
+
+<section class="py-5">
+	<div class="container">
+		<h2 class="mb-4">Manage Admin</h2>
+
+		@if (!string.IsNullOrEmpty(Model.StatusMessage))
+		{
+			<div class="alert alert-@(Model.IsSuccess ? "success" : "danger")">@Model.StatusMessage</div>
+		}
+
+		<div class="row">
+			<div class="col-lg-6 mb-4">
+				<div class="card border-0 shadow-sm">
+					<div class="card-header bg-primary text-white">Register Admin</div>
+					<div class="card-body">
+						<form method="post" asp-page-handler="Register">
+							<div class="mb-3">
+								<label class="form-label">Username</label>
+								<input asp-for="RegisterUsername" class="form-control" placeholder="Enter username" />
+							</div>
+							<div class="mb-3">
+								<label class="form-label">Password</label>
+								<input asp-for="RegisterPassword" class="form-control" type="password" placeholder="Enter password" />
+							</div>
+							<div class="mb-3">
+								<label class="form-label">Role</label>
+								<input class="form-control" value="Admin" readonly />
+							</div>
+							<button type="submit" class="btn btn-primary"><i class="fas fa-user-plus me-1"></i> Register</button>
+						</form>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-6 mb-4">
+				<div class="card border-0 shadow-sm">
+					<div class="card-header bg-danger text-white">Delete User</div>
+					<div class="card-body">
+						<form method="post" asp-page-handler="Delete">
+							<div class="mb-3">
+								<label class="form-label">Username</label>
+								<input asp-for="DeleteUsername" class="form-control" placeholder="Username to delete" />
+							</div>
+							<button type="submit" class="btn btn-danger"><i class="fas fa-user-minus me-1"></i> Delete</button>
+						</form>
+						<p class="text-muted small mt-2">Note: Deleting a user is irreversible.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

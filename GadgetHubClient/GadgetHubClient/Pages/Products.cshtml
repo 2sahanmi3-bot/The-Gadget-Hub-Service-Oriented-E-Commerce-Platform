@@ -1,0 +1,248 @@
+@page
+@model GadgetHubClient.Pages.ProductsModel
+@{
+    ViewData["Title"] = "Product Catalog - The Gadget Hub";
+}
+
+<div class="products-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="page-title">Product Catalog</h1>
+                <p class="page-subtitle">Discover amazing gadgets from our trusted distributors</p>
+            </div>
+        </div>
+        
+        <!-- Search and Filter Section -->
+        <div class="row mb-4">
+            <div class="col-md-8">
+                <div class="search-box">
+                    <input type="text" id="searchInput" class="form-control" placeholder="Search products..." />
+                    <button class="btn btn-primary" onclick="searchProducts()">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="filter-dropdown">
+                    <select id="categoryFilter" class="form-select" onchange="filterProducts()">
+                        <option value="">All Categories</option>
+                        <option value="smartphone">Smartphones</option>
+                        <option value="laptop">Laptops</option>
+                        <option value="tablet">Tablets</option>
+                        <option value="audio">Audio</option>
+                        <option value="watch">Smart Watches</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="products-section">
+    <div class="container">
+        <div class="row" id="productsContainer">
+            @if (Model.Products.Any())
+            {
+                @foreach (var product in Model.Products)
+                {
+                    <div class="col-lg-4 col-md-6 mb-4 product-item" data-name="@product.Name.ToLower()" data-category="@product.Category.ToLower()">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="@product.ImageUrl" alt="@product.Name" class="img-fluid">
+                                <div class="product-badge">
+                                    @if (product.Stock > 20)
+                                    {
+                                        <span class="badge bg-success">In Stock</span>
+                                    }
+                                    else if (product.Stock > 0)
+                                    {
+                                        <span class="badge bg-warning">Limited Stock</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="badge bg-danger">Out of Stock</span>
+                                    }
+                                </div>
+                                <div class="product-overlay">
+                                    <a href="/ProductDetails/@product.ProductId" class="btn btn-primary btn-sm">
+                                        <i class="fas fa-eye"></i> View Details
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="product-content">
+                                <h5 class="product-title">@product.Name</h5>
+                                <p class="product-description">@product.Description</p>
+                                <div class="product-actions">
+                                    <a href="/ProductDetails/@product.ProductId" class="btn btn-outline-primary btn-sm me-2">
+                                        <i class="fas fa-eye"></i> View Details
+                                    </a>
+                                    <button class="btn btn-primary btn-sm" onclick="addToCart('@product.GlobalId', '@product.Name', @product.Price, @product.ProductId)">
+                                        <i class="fas fa-shopping-cart"></i> Add to Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+            else
+            {
+                <div class="col-12 text-center">
+                    <div class="no-products">
+                        <i class="fas fa-box-open fa-3x text-muted mb-3"></i>
+                        <h4>No Products Available</h4>
+                        <p class="text-muted">We're working on adding more products. Please check back later!</p>
+                    </div>
+                </div>
+            }
+        </div>
+        
+        <!-- Pagination -->
+        <div class="row">
+            <div class="col-12">
+                <nav aria-label="Product pagination">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1">Previous</a>
+                        </li>
+                        <li class="page-item active">
+                            <a class="page-link" href="#">1</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">2</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">3</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">Next</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    <script>
+        function searchProducts() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            const productItems = document.querySelectorAll('.product-item');
+            
+            productItems.forEach(item => {
+                const productName = item.dataset.name;
+                if (productName.includes(searchTerm)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+        
+        function filterProducts() {
+            const selectedCategory = document.getElementById('categoryFilter').value;
+            const productItems = document.querySelectorAll('.product-item');
+            
+            productItems.forEach(item => {
+                const productCategory = item.dataset.category;
+                if (selectedCategory === '' || productCategory.includes(selectedCategory)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+        
+        async function addToCart(globalId, name, price, productId) {
+            // Check if user is logged in
+            const isLoggedIn = await checkUserLoginStatus();
+            
+            if (!isLoggedIn) {
+                showNotification('Please login to add items to cart', 'warning');
+                setTimeout(() => {
+                    window.location.href = '/Login?returnUrl=' + encodeURIComponent(window.location.pathname);
+                }, 1500);
+                return;
+            }
+
+            // Get existing cart from session storage
+            let cart = JSON.parse(sessionStorage.getItem('cart') || '[]');
+            
+            // Check if product already exists in cart
+            const existingItem = cart.find(item => item.globalId === globalId);
+            
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({
+                    globalId: globalId,
+                    name: name,
+                    price: price,
+                    productId: productId,
+                    quantity: 1
+                });
+            }
+            
+            // Save cart back to session storage
+            sessionStorage.setItem('cart', JSON.stringify(cart));
+            
+            // Show success message
+            showNotification('Product added to cart!', 'success');
+            
+            // Update cart count in header
+            updateCartCount();
+        }
+        
+        // Check if user is logged in
+        async function checkUserLoginStatus() {
+            try {
+                const response = await fetch('/api/auth/check', {
+                    method: 'GET',
+                    credentials: 'include'
+                });
+                return response.ok;
+            } catch (error) {
+                console.error('Error checking login status:', error);
+                return false;
+            }
+        }
+        
+        function showNotification(message, type) {
+            // Create notification element
+            const notification = document.createElement('div');
+            notification.className = `alert alert-${type} alert-dismissible fade show position-fixed`;
+            notification.style.cssText = 'top: 20px; right: 20px; z-index: 9999; min-width: 300px;';
+            notification.innerHTML = `
+                ${message}
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            `;
+            
+            document.body.appendChild(notification);
+            
+            // Auto remove after 3 seconds
+            setTimeout(() => {
+                if (notification.parentNode) {
+                    notification.parentNode.removeChild(notification);
+                }
+            }, 3000);
+        }
+        
+        function updateCartCount() {
+            const cart = JSON.parse(sessionStorage.getItem('cart') || '[]');
+            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+            
+            // Update cart count in header if element exists
+            const cartCountElement = document.getElementById('cartCount');
+            if (cartCountElement) {
+                cartCountElement.textContent = totalItems;
+            }
+        }
+        
+        // Initialize cart count on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            updateCartCount();
+        });
+    </script>
+}

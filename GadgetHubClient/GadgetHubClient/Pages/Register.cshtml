@@ -1,0 +1,304 @@
+@page
+@model GadgetHubClient.Pages.RegisterModel
+@{
+    ViewData["Title"] = "Register - The Gadget Hub";
+}
+
+<!-- Register Hero Section -->
+<section class="register-hero bg-primary text-white py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <h1 class="display-4 fw-bold mb-3">Join The Gadget Hub</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb mb-0">
+                        <li class="breadcrumb-item"><a href="/" class="text-white text-decoration-none">Home</a></li>
+                        <li class="breadcrumb-item active text-white-50" aria-current="page">Register</li>
+                    </ol>
+                </nav>
+            </div>
+            <div class="col-lg-4 text-lg-end">
+                <div class="register-benefits">
+                    <div class="row text-center">
+                        <div class="col-4">
+                            <h4 class="fw-bold mb-0">Free</h4>
+                            <small>Registration</small>
+                        </div>
+                        <div class="col-4">
+                            <h4 class="fw-bold mb-0">24/7</h4>
+                            <small>Support</small>
+                        </div>
+                        <div class="col-4">
+                            <h4 class="fw-bold mb-0">COD</h4>
+                            <small>Available</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Register Form Section -->
+<section class="register-section py-5 bg-white">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="register-card bg-white rounded-3 shadow-lg p-5">
+                    <div class="text-center mb-4">
+                        <h2 class="fw-bold text-dark mb-3">Create Your Account</h2>
+                        <p class="text-muted">
+                            Join thousands of satisfied customers and get access to the latest tech products with Cash on Delivery support.
+                        </p>
+                    </div>
+
+                    @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+                    {
+                        <div class="alert alert-danger" role="alert">
+                            <i class="fas fa-exclamation-circle me-2"></i>@Model.ErrorMessage
+                        </div>
+                    }
+
+                    @if (!string.IsNullOrEmpty(Model.SuccessMessage))
+                    {
+                        <div class="alert alert-success" role="alert">
+                            <i class="fas fa-check-circle me-2"></i>@Model.SuccessMessage
+                        </div>
+                    }
+
+                    <form method="post" class="register-form">
+                        <div class="row">
+                            <!-- Personal Information -->
+                            <div class="col-lg-6">
+                                <h5 class="fw-bold text-dark mb-3">
+                                    <i class="fas fa-user me-2 text-primary"></i>Personal Information
+                                </h5>
+                                
+                                <div class="mb-3">
+                                    <label for="name" class="form-label fw-semibold text-dark">Full Name *</label>
+                                    <input type="text" class="form-control register-input" id="name" name="Name" 
+                                           placeholder="Enter your full name" required>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="email" class="form-label fw-semibold text-dark">Email Address *</label>
+                                    <input type="email" class="form-control register-input" id="email" name="Email" 
+                                           placeholder="Enter your email" required>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="phone" class="form-label fw-semibold text-dark">Phone Number *</label>
+                                    <input type="tel" class="form-control register-input" id="phone" name="PhoneNumber" 
+                                           placeholder="Enter your phone number" required>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="address" class="form-label fw-semibold text-dark">Address *</label>
+                                    <textarea class="form-control register-input" id="address" name="Address" rows="3" 
+                                              placeholder="Enter your complete address" required></textarea>
+                                </div>
+                            </div>
+
+                            <!-- Account Information -->
+                            <div class="col-lg-6">
+                                <h5 class="fw-bold text-dark mb-3">
+                                    <i class="fas fa-lock me-2 text-primary"></i>Account Information
+                                </h5>
+                                
+                                <div class="mb-3">
+                                    <label for="username" class="form-label fw-semibold text-dark">Username *</label>
+                                    <input type="text" class="form-control register-input" id="username" name="Username" 
+                                           placeholder="Choose a username" required>
+                                    <div class="form-text">This will be used for login</div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="password" class="form-label fw-semibold text-dark">Password *</label>
+                                    <div class="input-group">
+                                        <input type="password" class="form-control register-input" id="password" name="Password" 
+                                               placeholder="Create a password" required>
+                                        <button class="btn btn-outline-secondary" type="button" onclick="togglePassword()">
+                                            <i class="fas fa-eye" id="passwordToggle"></i>
+                                        </button>
+                                    </div>
+                                    <div class="form-text">Minimum 6 characters</div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="confirmPassword" class="form-label fw-semibold text-dark">Confirm Password *</label>
+                                    <input type="password" class="form-control register-input" id="confirmPassword" name="ConfirmPassword" 
+                                           placeholder="Confirm your password" required>
+                                </div>
+
+                                <!-- Role Selection (Hidden - Always Customer) -->
+                                <input type="hidden" name="Role" value="Customer">
+                                
+                                <!-- Payment Method -->
+                                <div class="mb-4">
+                                    <h6 class="fw-bold text-dark mb-3">
+                                        <i class="fas fa-credit-card me-2 text-primary"></i>Payment Method
+                                    </h6>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="PaymentMethod" id="cod" value="COD" checked>
+                                        <label class="form-check-label fw-semibold" for="cod">
+                                            <i class="fas fa-money-bill-wave me-2 text-success"></i>Cash on Delivery
+                                        </label>
+                                        <div class="form-text">Pay when your order arrives</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Terms and Conditions -->
+                        <div class="mb-4">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="terms" required>
+                                <label class="form-check-label" for="terms">
+                                    I agree to the <a href="#" class="text-primary">Terms and Conditions</a> and <a href="#" class="text-primary">Privacy Policy</a>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary btn-lg register-submit-btn">
+                                <i class="fas fa-user-plus me-2"></i>Create Account
+                            </button>
+                        </div>
+
+                        <!-- Login Link -->
+                        <div class="text-center mt-4">
+                            <p class="text-muted">
+                                Already have an account? 
+                                <a href="/Login" class="text-primary fw-semibold text-decoration-none">Sign In</a>
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    <script>
+        function togglePassword() {
+            const passwordInput = document.getElementById('password');
+            const passwordToggle = document.getElementById('passwordToggle');
+            
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                passwordToggle.classList.remove('fa-eye');
+                passwordToggle.classList.add('fa-eye-slash');
+            } else {
+                passwordInput.type = 'password';
+                passwordToggle.classList.remove('fa-eye-slash');
+                passwordToggle.classList.add('fa-eye');
+            }
+        }
+
+        // Form validation
+        document.querySelector('.register-form').addEventListener('submit', function(e) {
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            const terms = document.getElementById('terms').checked;
+
+            if (password !== confirmPassword) {
+                e.preventDefault();
+                showNotification('Passwords do not match!', 'error');
+                return;
+            }
+
+            if (password.length < 6) {
+                e.preventDefault();
+                showNotification('Password must be at least 6 characters long!', 'error');
+                return;
+            }
+
+            if (!terms) {
+                e.preventDefault();
+                showNotification('Please accept the Terms and Conditions!', 'error');
+                return;
+            }
+
+            // Show loading state
+            const submitBtn = this.querySelector('.register-submit-btn');
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Creating Account...';
+        });
+
+        function showNotification(message, type) {
+            const notification = document.createElement('div');
+            notification.className = `alert alert-${type === 'error' ? 'danger' : type} alert-dismissible fade show position-fixed`;
+            notification.style.cssText = 'top: 20px; right: 20px; z-index: 9999; min-width: 350px;';
+            notification.innerHTML = `
+                <div class="d-flex align-items-center">
+                    <i class="fas fa-${type === 'success' ? 'check-circle' : 'exclamation-circle'} me-2"></i>
+                    ${message}
+                </div>
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            `;
+            
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                if (notification.parentNode) {
+                    notification.parentNode.removeChild(notification);
+                }
+            }, 5000);
+        }
+
+        // Real-time validation
+        document.querySelectorAll('.register-input').forEach(input => {
+            input.addEventListener('blur', function() {
+                validateField(this);
+            });
+        });
+
+        function validateField(field) {
+            const value = field.value.trim();
+            field.classList.remove('is-valid', 'is-invalid');
+            
+            if (field.hasAttribute('required') && value === '') {
+                field.classList.add('is-invalid');
+                return false;
+            }
+            
+            if (field.type === 'email' && value !== '') {
+                if (!isValidEmail(value)) {
+                    field.classList.add('is-invalid');
+                    return false;
+                }
+            }
+            
+            if (field.name === 'PhoneNumber' && value !== '') {
+                if (!isValidPhone(value)) {
+                    field.classList.add('is-invalid');
+                    return false;
+                }
+            }
+            
+            if (value !== '') {
+                field.classList.add('is-valid');
+            }
+            
+            return true;
+        }
+
+        function isValidEmail(email) {
+            const atSymbol = String.fromCharCode(64);
+            const dotIndex = email.lastIndexOf('.');
+            const atIndex = email.indexOf(atSymbol);
+            
+            if (atIndex <= 0 || atIndex >= email.length - 1) return false;
+            if (dotIndex <= atIndex || dotIndex >= email.length - 1) return false;
+            
+            return true;
+        }
+
+        function isValidPhone(phone) {
+            const phoneRegex = /^[\+]?[0-9\s\-\(\)]{10,}$/;
+            return phoneRegex.test(phone);
+        }
+    </script>
+}

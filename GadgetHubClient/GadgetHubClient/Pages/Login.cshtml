@@ -1,0 +1,220 @@
+@page
+@model GadgetHubClient.Pages.LoginModel
+@{
+    ViewData["Title"] = "Login - The Gadget Hub";
+}
+
+<!-- Login Hero Section -->
+<section class="login-hero bg-primary text-white py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <h1 class="display-4 fw-bold mb-3">Welcome Back</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb mb-0">
+                        <li class="breadcrumb-item"><a href="/" class="text-white text-decoration-none">Home</a></li>
+                        <li class="breadcrumb-item active text-white-50" aria-current="page">Login</li>
+                    </ol>
+                </nav>
+            </div>
+            <div class="col-lg-4 text-lg-end">
+                <div class="login-benefits">
+                    <div class="row text-center">
+                        <div class="col-4">
+                            <h4 class="fw-bold mb-0">Secure</h4>
+                            <small>Login</small>
+                        </div>
+                        <div class="col-4">
+                            <h4 class="fw-bold mb-0">Fast</h4>
+                            <small>Access</small>
+                        </div>
+                        <div class="col-4">
+                            <h4 class="fw-bold mb-0">24/7</h4>
+                            <small>Support</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Login Form Section -->
+<section class="login-section py-5 bg-white">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <div class="login-card bg-white rounded-3 shadow-lg p-5">
+                    <div class="text-center mb-4">
+                        <h2 class="fw-bold text-dark mb-3">Sign In to Your Account</h2>
+                        <p class="text-muted">
+                            Access your dashboard, track orders, and manage your account.
+                        </p>
+                    </div>
+
+                    @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+                    {
+                        <div class="alert alert-danger" role="alert">
+                            <i class="fas fa-exclamation-circle me-2"></i>@Model.ErrorMessage
+                        </div>
+                    }
+                    
+                    @if (TempData["Message"] != null)
+                    {
+                        <div class="alert alert-info" role="alert">
+                            <i class="fas fa-info-circle me-2"></i>@TempData["Message"]
+                        </div>
+                    }
+
+                    <form method="post" class="login-form">
+                        <div class="mb-3">
+                            <label for="username" class="form-label fw-semibold text-dark">Username *</label>
+                            <input type="text" class="form-control login-input" id="username" name="Username" 
+                                   placeholder="Enter your username" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="password" class="form-label fw-semibold text-dark">Password *</label>
+                            <div class="input-group">
+                                <input type="password" class="form-control login-input" id="password" name="Password" 
+                                       placeholder="Enter your password" required>
+                                <button class="btn btn-outline-secondary" type="button" onclick="togglePassword()">
+                                    <i class="fas fa-eye" id="passwordToggle"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="rememberMe" name="RememberMe">
+                            <label class="form-check-label fw-semibold text-dark" for="rememberMe">
+                                Remember me
+                            </label>
+                        </div>
+
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary btn-lg login-submit-btn">
+                                <i class="fas fa-sign-in-alt me-2"></i>Sign In
+                            </button>
+                        </div>
+
+                        <div class="text-center mt-4">
+                            <p class="text-muted">
+                                Don't have an account? 
+                                <a href="/Register" class="text-primary fw-semibold text-decoration-none">Create Account</a>
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    <script>
+        function togglePassword() {
+            const passwordInput = document.getElementById('password');
+            const passwordToggle = document.getElementById('passwordToggle');
+            
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                passwordToggle.classList.remove('fa-eye');
+                passwordToggle.classList.add('fa-eye-slash');
+            } else {
+                passwordInput.type = 'password';
+                passwordToggle.classList.remove('fa-eye-slash');
+                passwordToggle.classList.add('fa-eye');
+            }
+        }
+
+        // Form validation
+        document.querySelector('.login-form').addEventListener('submit', function(e) {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            if (!username || !password) {
+                e.preventDefault();
+                showNotification('Please enter both username and password!', 'error');
+                return;
+            }
+
+            // Show loading state
+            const submitBtn = this.querySelector('.login-submit-btn');
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Signing In...';
+        });
+
+        function showNotification(message, type) {
+            const notification = document.createElement('div');
+            notification.className = `alert alert-${type === 'error' ? 'danger' : type} alert-dismissible fade show position-fixed`;
+            notification.style.cssText = 'top: 20px; right: 20px; z-index: 9999; min-width: 350px;';
+            notification.innerHTML = `
+                <div class="d-flex align-items-center">
+                    <i class="fas fa-${type === 'success' ? 'check-circle' : 'exclamation-circle'} me-2"></i>
+                    ${message}
+                </div>
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            `;
+            
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                if (notification.parentNode) {
+                    notification.parentNode.removeChild(notification);
+                }
+            }, 5000);
+        }
+
+        // Real-time validation
+        document.querySelectorAll('.login-input').forEach(input => {
+            input.addEventListener('blur', function() {
+                validateField(this);
+            });
+        });
+
+        function validateField(field) {
+            const value = field.value.trim();
+            field.classList.remove('is-valid', 'is-invalid');
+            
+            if (field.hasAttribute('required') && value === '') {
+                field.classList.add('is-invalid');
+                return false;
+            }
+            
+            if (value !== '') {
+                field.classList.add('is-valid');
+            }
+            
+            return true;
+        }
+
+        // Check if user is already logged in
+        document.addEventListener('DOMContentLoaded', function() {
+            const user = JSON.parse(sessionStorage.getItem('user') || 'null');
+            if (user && user.isLoggedIn) {
+                showNotification('You are already logged in', 'info');
+                setTimeout(() => {
+                    window.location.href = '/';
+                }, 2000);
+            }
+        });
+
+        // Store session data in sessionStorage after successful login
+        // This will be called from the server-side redirect
+        @if (TempData["LoginSuccess"] != null)
+        {
+            <text>
+            // Store session data in browser sessionStorage
+            sessionStorage.setItem('userId', '@HttpContext.Session.GetString("UserId")');
+            sessionStorage.setItem('username', '@HttpContext.Session.GetString("Username")');
+            sessionStorage.setItem('role', '@HttpContext.Session.GetString("Role")');
+            sessionStorage.setItem('customerId', '@HttpContext.Session.GetString("CustomerId")');
+            sessionStorage.setItem('customerName', '@HttpContext.Session.GetString("CustomerName")');
+            sessionStorage.setItem('customerEmail', '@HttpContext.Session.GetString("CustomerEmail")');
+            
+            // Set login status
+            sessionStorage.setItem('isLoggedIn', 'true');
+            </text>
+        }
+    </script>
+}

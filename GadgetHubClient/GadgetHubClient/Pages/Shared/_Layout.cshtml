@@ -1,0 +1,380 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - The Gadget Hub</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/modern-theme.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/contact.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/GadgetHubClient.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+</head>
+<body>
+    <header>
+        <!-- Simple Clean Header -->
+        <nav class="simple-navbar">
+            <div class="container">
+                <div class="navbar-content">
+                    <!-- Brand -->
+                    <a class="simple-brand" asp-area="" asp-page="/Index">
+                        <span class="brand-name">Gadget Hub</span>
+                    </a>
+                    
+                    <!-- Mobile Toggle -->
+                    <button class="mobile-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#simpleNavbar" 
+                            aria-controls="simpleNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="toggle-line"></span>
+                        <span class="toggle-line"></span>
+                        <span class="toggle-line"></span>
+                    </button>
+                    
+                    <!-- Navigation Menu -->
+                    <div class="navbar-collapse" id="simpleNavbar">
+                        <ul class="simple-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" asp-area="" asp-page="/Index">Home</a>
+                            </li>
+                            @{
+                                var role = Context.Session.GetString("Role");
+                                var isAdmin = !string.IsNullOrEmpty(role) && string.Equals(role, "Admin", StringComparison.OrdinalIgnoreCase);
+                                var userIdSession = Context.Session.GetString("UserId");
+                                var isLoggedIn = !string.IsNullOrEmpty(userIdSession);
+                            }
+                            @if (isLoggedIn)
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link text-danger" href="/Logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                                </li>
+                            }
+                            @if (isAdmin)
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/Admin/Dashboard"><i class="fas fa-gauge-high"></i> Admin Dashboard</a>
+                                </li>
+                            }
+                            <li class="nav-item dropdown">
+                                <a class="nav-link" asp-page="/Products">Products</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/Cart">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    Cart
+                                    <span class="cart-badge" id="cartCount">0</span>
+                                </a>
+                            </li>
+                            <li class="nav-item" id="orderDetailsNav" style="display: none;">
+                                <a class="nav-link" href="/OrderDetails">
+                                    <i class="fas fa-clipboard-list"></i>
+                                    My Orders
+                                </a>
+                            </li>
+                            @if (!isLoggedIn)
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/Login">Login/Register</a>
+                                </li>
+                            }
+                            <li class="nav-item">
+                                <a class="nav-link" asp-page="/Contact">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="main-content">
+        <main role="main">
+            @RenderBody()
+        </main>
+    </div>
+
+    <!-- Professional Footer -->
+    <footer class="footer-section bg-dark text-white">
+        <div class="container">
+            <!-- Main Footer Content -->
+            <div class="row py-5">
+                <div class="col-lg-4 mb-4">
+                    <div class="footer-brand mb-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="footer-logo me-3">
+                                <i class="fas fa-microchip"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white mb-0">The Gadget Hub</h4>
+                                <small class="text-muted">Premium Tech Solutions</small>
+                            </div>
+                        </div>
+                        <p class="text-muted">Your one-stop destination for the latest and greatest technology products. We compare prices from top distributors to bring you the best deals.</p>
+                    </div>
+                    <div class="social-links">
+                        <h6 class="text-white mb-3">Follow Us</h6>
+                        <a href="#" class="social-link me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link me-3"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="text-white mb-3">Quick Links</h6>
+                    <ul class="footer-links list-unstyled">
+                        <li><a href="/" class="text-muted">Home</a></li>
+                        <li><a href="/Products" class="text-muted">Products</a></li>
+                        <li><a href="/About" class="text-muted">About Us</a></li>
+                        <li><a href="/Contact" class="text-muted">Contact</a></li>
+                        <li><a href="#" class="text-muted">Support</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="text-white mb-3">Categories</h6>
+                    <ul class="footer-links list-unstyled">
+                        <li><a href="#" class="text-muted">Smartphones</a></li>
+                        <li><a href="#" class="text-muted">Laptops</a></li>
+                        <li><a href="#" class="text-muted">Audio Devices</a></li>
+                        <li><a href="#" class="text-muted">Wearables</a></li>
+                        <li><a href="#" class="text-muted">Accessories</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="text-white mb-3">Customer Service</h6>
+                    <ul class="footer-links list-unstyled">
+                        <li><a href="#" class="text-muted">Help Center</a></li>
+                        <li><a href="#" class="text-muted">Shipping Info</a></li>
+                        <li><a href="#" class="text-muted">Returns</a></li>
+                        <li><a href="#" class="text-muted">Warranty</a></li>
+                        <li><a href="#" class="text-muted">Track Order</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="text-white mb-3">Contact Info</h6>
+                    <div class="contact-info">
+                        <div class="contact-item mb-2">
+                            <i class="fas fa-map-marker-alt text-primary me-2"></i>
+                            <span class="text-muted">123 Tech Street, Colombo 03, Sri Lanka</span>
+                        </div>
+                        <div class="contact-item mb-2">
+                            <i class="fas fa-phone text-primary me-2"></i>
+                            <span class="text-muted">+94 77 123 4567</span>
+                        </div>
+                        <div class="contact-item mb-2">
+                            <i class="fas fa-envelope text-primary me-2"></i>
+                            <span class="text-muted">info@gadgethub.lk</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock text-primary me-2"></i>
+                            <span class="text-muted">Mon-Sat: 9AM-6PM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Newsletter Section -->
+            <div class="newsletter-section py-4 border-top border-secondary">
+                <div class="row align-items-center">
+                    <div class="col-md-6 mb-3 mb-md-0">
+                        <h6 class="text-white mb-0">Subscribe to our newsletter</h6>
+                        <small class="text-muted">Get the latest tech news and exclusive offers</small>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="input-group">
+                            <input type="email" class="form-control newsletter-input" placeholder="Enter your email">
+                            <button class="btn btn-primary newsletter-btn" type="button">
+                                <i class="fas fa-paper-plane me-1"></i>Subscribe
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Bottom Footer -->
+            <div class="bottom-footer py-3 border-top border-secondary">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="text-muted mb-0">&copy; 2024 The Gadget Hub. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <div class="footer-links d-flex justify-content-md-end">
+                            <a href="#" class="text-muted me-3">Privacy Policy</a>
+                            <a href="#" class="text-muted me-3">Terms of Service</a>
+                            <a href="#" class="text-muted">Cookie Policy</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Professional JavaScript Enhancements -->
+    <script>
+        // Back to top functionality
+        window.addEventListener('scroll', function() {
+            const backToTop = document.getElementById('backToTop');
+            if (window.scrollY > 300) {
+                backToTop.classList.add('show');
+            } else {
+                backToTop.classList.remove('show');
+            }
+        });
+
+        document.getElementById('backToTop').addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all scroll-animate elements
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.scroll-animate').forEach(el => {
+                observer.observe(el);
+            });
+        });
+
+        // Update cart count on page load
+        function updateCartCount() {
+            const cart = JSON.parse(sessionStorage.getItem('cart') || '[]');
+            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+            const cartCountElement = document.getElementById('cartCount');
+            if (cartCountElement) {
+                cartCountElement.textContent = totalItems;
+                if (totalItems > 0) {
+                    cartCountElement.style.display = 'block';
+                } else {
+                    cartCountElement.style.display = 'none';
+                }
+            }
+        }
+
+        // Initialize cart count
+        document.addEventListener('DOMContentLoaded', updateCartCount);
+
+        // Professional loading states
+        function showLoading(element) {
+            element.innerHTML = '<div class="loading-container"><div class="loading-spinner"></div><div class="loading-text">Loading...</div></div>';
+        }
+
+        function hideLoading(element, content) {
+            element.innerHTML = content;
+        }
+
+        // Professional notifications
+        function showNotification(message, type = 'info', duration = 3000) {
+            const notification = document.createElement('div');
+            notification.className = `alert alert-${type} alert-dismissible fade show position-fixed`;
+            notification.style.cssText = 'top: 20px; right: 20px; z-index: 9999; min-width: 300px; max-width: 400px;';
+            notification.innerHTML = `
+                <div class="d-flex align-items-center">
+                    <i class="fas fa-${getNotificationIcon(type)} me-2"></i>
+                    <span>${message}</span>
+                    <button type="button" class="btn-close ms-auto" data-bs-dismiss="alert"></button>
+                </div>
+            `;
+            
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                if (notification.parentNode) {
+                    notification.parentNode.removeChild(notification);
+                }
+            }, duration);
+        }
+
+        function getNotificationIcon(type) {
+            const icons = {
+                'success': 'check-circle',
+                'danger': 'exclamation-circle',
+                'warning': 'exclamation-triangle',
+                'info': 'info-circle'
+            };
+            return icons[type] || 'info-circle';
+        }
+
+        // Make functions globally available
+        window.showNotification = showNotification;
+        window.showLoading = showLoading;
+        window.hideLoading = hideLoading;
+        window.updateCartCount = updateCartCount;
+
+        // Check authentication status and show/hide navigation items
+        async function checkAuthAndUpdateNav() {
+            try {
+                const response = await fetch('/api/auth/check', {
+                    method: 'GET',
+                    credentials: 'include'
+                });
+                
+                const orderDetailsNav = document.getElementById('orderDetailsNav');
+                const loginNav = document.querySelector('a[href="/Login"]').parentElement;
+                
+                if (response.ok) {
+                    // User is logged in - show Order Details, hide Login
+                    if (orderDetailsNav) orderDetailsNav.style.display = 'block';
+                    if (loginNav) loginNav.style.display = 'none';
+                } else {
+                    // User is not logged in - hide Order Details, show Login
+                    if (orderDetailsNav) orderDetailsNav.style.display = 'none';
+                    if (loginNav) loginNav.style.display = 'block';
+                }
+            } catch (error) {
+                console.error('Error checking auth status:', error);
+                // Default to not logged in state
+                const orderDetailsNav = document.getElementById('orderDetailsNav');
+                const loginNav = document.querySelector('a[href="/Login"]').parentElement;
+                if (orderDetailsNav) orderDetailsNav.style.display = 'none';
+                if (loginNav) loginNav.style.display = 'block';
+            }
+        }
+
+        // Run auth check on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            checkAuthAndUpdateNav();
+        });
+    </script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
